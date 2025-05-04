@@ -1,0 +1,682 @@
+{
+    "name": "test Backup",
+    "description": "Backup of test created on 2025-05-03",
+    "category": "Backup",
+    "roles": [
+        {
+            "name": "Owner",
+            "color": "0xff0000",
+            "hoist": true,
+            "mentionable": true,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": false,
+                "ban_members": false,
+                "administrator": true,
+                "manage_channels": false,
+                "manage_guild": false,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": false,
+                "send_tts_messages": false,
+                "manage_messages": false,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": false,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": false,
+                "speak": false,
+                "mute_members": false,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": false,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        },
+        {
+            "name": "Admin",
+            "color": "0xe74c3c",
+            "hoist": true,
+            "mentionable": true,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": true,
+                "ban_members": true,
+                "administrator": false,
+                "manage_channels": true,
+                "manage_guild": true,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": false,
+                "send_tts_messages": false,
+                "manage_messages": true,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": false,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": false,
+                "speak": false,
+                "mute_members": false,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": true,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        },
+        {
+            "name": "Support Manager",
+            "color": "0x1abc9c",
+            "hoist": true,
+            "mentionable": true,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": true,
+                "ban_members": false,
+                "administrator": false,
+                "manage_channels": false,
+                "manage_guild": false,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": false,
+                "send_tts_messages": false,
+                "manage_messages": true,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": false,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": false,
+                "speak": false,
+                "mute_members": true,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": false,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        },
+        {
+            "name": "Support Agent",
+            "color": "0x3498db",
+            "hoist": true,
+            "mentionable": true,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": false,
+                "ban_members": false,
+                "administrator": false,
+                "manage_channels": false,
+                "manage_guild": false,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": false,
+                "send_tts_messages": false,
+                "manage_messages": true,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": false,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": false,
+                "speak": false,
+                "mute_members": false,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": false,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        },
+        {
+            "name": "Product Expert",
+            "color": "0xf1c40f",
+            "hoist": true,
+            "mentionable": true,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": false,
+                "ban_members": false,
+                "administrator": false,
+                "manage_channels": false,
+                "manage_guild": false,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": false,
+                "send_tts_messages": false,
+                "manage_messages": false,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": false,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": false,
+                "speak": false,
+                "mute_members": false,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": false,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        },
+        {
+            "name": "User",
+            "color": "0x95a5a6",
+            "hoist": true,
+            "mentionable": false,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": false,
+                "ban_members": false,
+                "administrator": false,
+                "manage_channels": false,
+                "manage_guild": false,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": true,
+                "send_tts_messages": false,
+                "manage_messages": false,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": true,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": true,
+                "speak": true,
+                "mute_members": false,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": false,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        },
+        {
+            "name": "Verified",
+            "color": "0x2ecc71",
+            "hoist": false,
+            "mentionable": false,
+            "permissions": {
+                "create_instant_invite": false,
+                "kick_members": false,
+                "ban_members": false,
+                "administrator": false,
+                "manage_channels": false,
+                "manage_guild": false,
+                "add_reactions": false,
+                "view_audit_log": false,
+                "priority_speaker": false,
+                "stream": false,
+                "read_messages": false,
+                "send_messages": false,
+                "send_tts_messages": false,
+                "manage_messages": false,
+                "embed_links": false,
+                "attach_files": false,
+                "read_message_history": false,
+                "mention_everyone": false,
+                "external_emojis": false,
+                "view_guild_insights": false,
+                "connect": false,
+                "speak": false,
+                "mute_members": false,
+                "deafen_members": false,
+                "move_members": false,
+                "use_voice_activation": false,
+                "change_nickname": false,
+                "manage_nicknames": false,
+                "manage_roles": false,
+                "manage_webhooks": false,
+                "manage_expressions": false,
+                "use_application_commands": false,
+                "request_to_speak": false,
+                "manage_events": false,
+                "manage_threads": false,
+                "create_public_threads": false,
+                "create_private_threads": false,
+                "external_stickers": false,
+                "send_messages_in_threads": false,
+                "use_embedded_activities": false,
+                "moderate_members": false,
+                "view_creator_monetization_analytics": false,
+                "use_soundboard": false,
+                "create_expressions": false,
+                "create_events": false,
+                "use_external_sounds": false,
+                "send_voice_messages": false,
+                "send_polls": false,
+                "use_external_apps": false
+            }
+        }
+    ],
+    "categories": [
+        {
+            "name": "Text channels",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "general",
+                    "type": "text",
+                    "topic": "",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "Voice channels",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "General",
+                    "type": "voice",
+                    "bitrate": 64000,
+                    "user_limit": 0,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udceb\u2503\ud835\udcd0\ud835\udcf7\ud835\udcef\ud835\udcf8\ud835\udcfb\ud835\udcf6\ud835\udcea\ud835\udcfd\ud835\udcf2\ud835\udcf8\ud835\udcf7",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "\ud83d\udc4b\u2503\u1d21\u1d07\u029f\u1d04\u1d0f\u1d0d\u1d07",
+                    "type": "text",
+                    "topic": "Welcome to our support server!",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udce2\u2503\u1d00\u0274\u0274\u1d0f\u1d1c\u0274\u1d04\u1d07\u1d0d\u1d07\u0274\u1d1b\ua731",
+                    "type": "text",
+                    "topic": "Important support announcements",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {
+                        "Admin": {
+                            "send_messages": true
+                        },
+                        "Support Manager": {
+                            "send_messages": true
+                        }
+                    }
+                },
+                {
+                    "name": "\ud83d\udca1\u2503\u029c\u1d0f\u1d21-\u1d1b\u1d0f",
+                    "type": "text",
+                    "topic": "How to use the support system",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcac\u2503\ua730\u1d07\u1d07\u1d05\u0299\u1d00\u1d04\u1d0b",
+                    "type": "text",
+                    "topic": "Leave your feedback about our support",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udee0\u2503\ud835\udcc0\ud835\udcc9\ud835\udcca\ud835\udcc8\ud835\udcca\ud835\udcbb\ud835\udcc3\ud835\udcc9",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "\ud83d\udccc\u2503\u1d04\u0280\u1d07\u1d00\u1d1b\u1d07-\u1d1b\u026a\u1d04\u1d0b\u1d07\u1d1b",
+                    "type": "text",
+                    "topic": "Create a support ticket",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\u2753\u2503\ua730\u1d00q\ua731",
+                    "type": "text",
+                    "topic": "Frequently asked questions",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcc3\u2503\u1d0b\u0274\u1d0f\u1d21\u029f\u1d07\u1d05\u0262\u1d07-\u0299\u1d00\ua731\u1d07",
+                    "type": "text",
+                    "topic": "Common solutions and knowledge base",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udea8\u2503\u1d1c\u0280\u0262\u1d07\u0274\u1d1b-\u029c\u1d07\u029f\u1d18",
+                    "type": "text",
+                    "topic": "Report urgent issues here",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udc64\u2503\ud835\udcf3\ud835\udcf8\ud835\udcfb\ud835\udcfe\ud835\udcf6\ud835\udcfc",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "\ud83d\udd25\u2503\u0262\u1d07\u0274\u1d07\u0280\u1d00\u029f-\u029c\u1d07\u029f\u1d18",
+                    "type": "text",
+                    "topic": "General help questions",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcbb\u2503\u1d1b\u1d07\u1d04\u029c\u0274\u026a\u1d04\u1d00\u029f-\u029c\u1d07\u029f\u1d18",
+                    "type": "text",
+                    "topic": "Technical support questions",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udd0d\u2503\ua730\u1d07\u1d00\u1d1b\u1d1c\u0280\u1d07-\u0280\u1d07q\u1d1c\u1d07\ua731\u1d1b\ua731",
+                    "type": "text",
+                    "topic": "Request new features",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udc1b\u2503\u0299\u1d1c\u0262-\u0280\u1d07\u1d18\u1d0f\u0280\u1d1b\ua731",
+                    "type": "text",
+                    "topic": "Report bugs or issues",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcb8\u2503\u0299\u026a\u029f\u029f\u026a\u0274\u0262",
+                    "type": "text",
+                    "topic": "Billing and account questions",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udcbe\u2503\ud835\udc7d\ud835\udc8a\ud835\udc85\ud835\udc86\ud835\udc90 \ud835\udc72\ud835\udc96\ud835\udc8a\ud835\udc85\ud835\udc86\ud835\udc94",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "\ud83c\udfa5\u2503\u1d1b\u1d1c\u1d1b\u1d0f\u0280\u026a\u1d00\u029f\ua731",
+                    "type": "text",
+                    "topic": "Video tutorials for common questions",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcd6\u2503\u1d1c\ua731\u1d07\u0280-\u0262\u1d1c\u026a\u1d05\u1d07\ua731",
+                    "type": "text",
+                    "topic": "Comprehensive user guides",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcc8\u2503\u1d1b\u026a\u1d18\ua731-\u1d00\u0274\u1d05-\u1d1b\u0280\u026a\u1d04\u1d0b\ua731",
+                    "type": "text",
+                    "topic": "Helpful tips and tricks",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udca1\u2503\u0299\u1d07\ua731\u1d1b-\u1d18\u0280\u1d00\u1d04\u1d1b\u026a\u1d04\u1d07\ua731",
+                    "type": "text",
+                    "topic": "Best practices and recommendations",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "\ud83c\udf99\u2503\ud835\udc7d\ud835\udc90\ud835\udc8a\ud835\udc84\ud835\udc86 \ud835\udc6f\ud835\udc96\ud835\udc91\ud835\udc91\ud835\udc90\ud835\udc93\ud835\udc95",
+            "permissions": {
+                "Verified": {
+                    "read_messages": true
+                }
+            },
+            "channels": [
+                {
+                    "name": "\ud83d\udde3\u2503Live Support",
+                    "type": "voice",
+                    "bitrate": 64000,
+                    "user_limit": 10,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83c\udfaf\u2503Tech Help",
+                    "type": "voice",
+                    "bitrate": 64000,
+                    "user_limit": 5,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udcf2\u2503Waiting Room",
+                    "type": "voice",
+                    "bitrate": 64000,
+                    "user_limit": 15,
+                    "permissions": {}
+                },
+                {
+                    "name": "\ud83d\udca4\u2503AFK",
+                    "type": "voice",
+                    "bitrate": 64000,
+                    "user_limit": 0,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udd12 Verification",
+            "permissions": {
+                "Verified": {
+                    "read_messages": false
+                }
+            },
+            "channels": [
+                {
+                    "name": "verify",
+                    "type": "text",
+                    "topic": "",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4724 @@
+{
+  "gaming": {
+    "description": "Gaming server with game-specific channels, LFG system, and voice channels",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Game Master",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "move_members": true
+        }
+      },
+      {
+        "name": "Pro Gamer",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true
+        }
+      },
+      {
+        "name": "Member",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🎮┃𝑹𝒆𝒂𝒍𝒎 𝑰𝒏𝒇𝒐",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important server announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📊┃ᴘᴏʟʟꜱ",
+            "type": "text",
+            "topic": "Vote on community decisions",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🏰┃𝕮𝖔𝖒𝖒𝖚𝖓𝖎𝖙𝖞",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General gaming discussions"
+          },
+          {
+            "name": "🎯┃ʟꜰɢ",
+            "type": "text",
+            "topic": "Looking for group/team"
+          },
+          {
+            "name": "🔧┃ꜱᴜᴘᴘᴏʀᴛ",
+            "type": "text",
+            "topic": "Get help with server issues"
+          },
+          {
+            "name": "🎉┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Upcoming gaming events and tournaments"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          }
+        ]
+      },
+      {
+        "name": "🎲┃𝐆𝐚𝐦𝐞 𝐙𝐨𝐧𝐞𝐬",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🗡️┃ᴍɪɴᴇᴄʀᴀꜰᴛ",
+            "type": "text",
+            "topic": "Minecraft discussions and server info"
+          },
+          {
+            "name": "🔫┃ꜰᴏʀᴛɴɪᴛᴇ",
+            "type": "text",
+            "topic": "Fortnite discussions and squad-ups"
+          },
+          {
+            "name": "⚔️┃ᴠᴀʟᴏʀᴀɴᴛ",
+            "type": "text",
+            "topic": "Valorant discussions and team-ups"
+          },
+          {
+            "name": "🏆┃ʟᴇᴀɢᴜᴇ",
+            "type": "text",
+            "topic": "League of Legends discussions"
+          },
+          {
+            "name": "🎯┃ᴄꜱɢᴏ",
+            "type": "text",
+            "topic": "CS:GO discussions and matches"
+          },
+          {
+            "name": "🛡️┃ᴀᴘᴇx",
+            "type": "text",
+            "topic": "Apex Legends discussions"
+          },
+          {
+            "name": "👾┃ᴏᴛʜᴇʀ-ɢᴀᴍᴇꜱ",
+            "type": "text",
+            "topic": "Discussions about other games"
+          }
+        ]
+      },
+      {
+        "name": "🎤┃𝑽𝒐𝒊𝒄𝒆 𝑪𝒉𝒂𝒏𝒏𝒆𝒍𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎮┃General Gaming",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🏹┃Squad Voice #1",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "🏹┃Squad Voice #2",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "🏹┃Squad Voice #3",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "🎵┃Music & Chill",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "community": {
+    "description": "General community server with channels for socializing, sharing, and having fun",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Helper",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Active Member",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Member",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "✨┃𝒲𝑒𝓁𝒸𝑜𝓂𝑒",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to our community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important community announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Community rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "👤┃ɪɴᴛʀᴏᴅᴜᴄᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Introduce yourself to the community"
+          },
+          {
+            "name": "❓┃ʜᴇʟᴘ-ᴅᴇꜱᴋ",
+            "type": "text",
+            "topic": "Get help with questions about the server"
+          }
+        ]
+      },
+      {
+        "name": "🌈┃𝓒𝓸𝓶𝓶𝓾𝓷𝓲𝓽𝔂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General discussions"
+          },
+          {
+            "name": "🎮┃ɢᴀᴍɪɴɢ",
+            "type": "text",
+            "topic": "Gaming discussions"
+          },
+          {
+            "name": "📷┃ᴘʜᴏᴛᴏꜱ",
+            "type": "text",
+            "topic": "Share your photos"
+          },
+          {
+            "name": "🎨┃ᴀʀᴛ",
+            "type": "text",
+            "topic": "Share your artwork"
+          },
+          {
+            "name": "🎵┃ᴍᴜꜱɪᴄ",
+            "type": "text",
+            "topic": "Music discussions and recommendations"
+          },
+          {
+            "name": "🍕┃ꜰᴏᴏᴅ",
+            "type": "text",
+            "topic": "Food discussions and recipes"
+          },
+          {
+            "name": "🎬┃ᴍᴇᴅɪᴀ",
+            "type": "text",
+            "topic": "Movies, TV shows, and streaming"
+          },
+          {
+            "name": "😂┃ᴍᴇᴍᴇꜱ",
+            "type": "text",
+            "topic": "Share your memes"
+          }
+        ]
+      },
+      {
+        "name": "🔧┃𝐻𝑒𝓁𝓅𝒻𝓊𝓁",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💡┃ꜱᴜɢɢᴇꜱᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Suggest improvements for the server"
+          },
+          {
+            "name": "🔧┃ꜱᴜᴘᴘᴏʀᴛ",
+            "type": "text",
+            "topic": "Request help with any issues"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          },
+          {
+            "name": "🎭┃ʀᴏʟᴇꜱ",
+            "type": "text",
+            "topic": "Get server roles",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝒱𝑜𝒾𝒸𝑒 𝒞𝒽𝒶𝓃𝓃𝑒𝓁𝓈",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🗣️┃General Chat",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🎵┃Music Lounge",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎮┃Gaming Voice",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎬┃Movie Night",
+            "type": "voice",
+            "user_limit": 20
+          },
+          {
+            "name": "🧘┃Chill Corner",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "content": {
+    "description": "Content creator server with channels for announcements, feedback, and exclusive content",
+    "roles": [
+      {
+        "name": "Creator",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Manager",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "VIP Supporter",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Subscriber",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Fan",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "📢┃𝕀𝕟𝕗𝕠𝕣𝕞𝕒𝕥𝕚𝕠𝕟",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the creator community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Creator announcements and updates",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Creator": {
+                "send_messages": true
+              },
+              "Manager": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📅┃ᴜᴘᴄᴏᴍɪɴɢ",
+            "type": "text",
+            "topic": "Upcoming content and events",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Creator": {
+                "send_messages": true
+              },
+              "Manager": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Community rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "❓┃ꜰᴀq",
+            "type": "text",
+            "topic": "Frequently asked questions",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🎬┃𝘾𝙤𝙣𝙩𝙚𝙣𝙩",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎥┃ᴠɪᴅᴇᴏꜱ",
+            "type": "text",
+            "topic": "Latest videos and content",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Creator": {
+                "send_messages": true
+              },
+              "Manager": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📰┃ɴᴇᴡꜱ",
+            "type": "text",
+            "topic": "News and updates about the creator",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Creator": {
+                "send_messages": true
+              },
+              "Manager": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "🎨┃ᴄʀᴇᴀᴛɪᴠᴇ-ᴄᴏʀɴᴇʀ",
+            "type": "text",
+            "topic": "Creator's artwork and designs",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Creator": {
+                "send_messages": true
+              },
+              "Manager": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "💬┃𝓒𝓸𝓶𝓶𝓾𝓷𝓲𝓽𝔂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General community discussions"
+          },
+          {
+            "name": "💭┃ᴄᴏɴᴛᴇɴᴛ-ᴅɪꜱᴄᴜꜱꜱɪᴏɴ",
+            "type": "text",
+            "topic": "Discuss the creator's content"
+          },
+          {
+            "name": "🎨┃ꜰᴀɴ-ᴀʀᴛ",
+            "type": "text",
+            "topic": "Share your fan art and creations"
+          },
+          {
+            "name": "📷┃ᴘʜᴏᴛᴏꜱ",
+            "type": "text",
+            "topic": "Share photos related to the creator"
+          },
+          {
+            "name": "💡┃ꜱᴜɢɢᴇꜱᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Suggest ideas for future content"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          }
+        ]
+      },
+      {
+        "name": "🔒┃𝓥𝓘𝓟 𝓢𝓮𝓬𝓽𝓲𝓸𝓷",
+        "permissions": {
+          "@everyone": {
+            "view_channel": false
+          },
+          "VIP Supporter": {
+            "view_channel": true
+          },
+          "Subscriber": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🔮┃ᴠɪᴘ-ᴄʜᴀᴛ",
+            "type": "text",
+            "topic": "Exclusive chat for VIP members"
+          },
+          {
+            "name": "⭐┃ᴇxᴄʟᴜꜱɪᴠᴇ-ᴄᴏɴᴛᴇɴᴛ",
+            "type": "text",
+            "topic": "Exclusive content for supporters",
+            "permissions": {
+              "VIP Supporter": {
+                "view_channel": true
+              },
+              "Subscriber": {
+                "view_channel": true
+              },
+              "@everyone": {
+                "view_channel": false
+              }
+            }
+          },
+          {
+            "name": "🎟️┃ꜱᴜᴘᴘᴏʀᴛᴇʀ-ᴘᴇʀᴋꜱ",
+            "type": "text",
+            "topic": "Special perks for supporters",
+            "permissions": {
+              "VIP Supporter": {
+                "view_channel": true
+              },
+              "Subscriber": {
+                "view_channel": true
+              },
+              "@everyone": {
+                "view_channel": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑽𝒐𝒊𝒄𝒆 𝑪𝒉𝒂𝒏𝒏𝒆𝒍𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎤┃Creator Lounge",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "🎧┃Community Chat",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🎬┃Live Events",
+            "type": "voice",
+            "user_limit": 50
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "fan": {
+    "description": "Fan server for books, movies, games, or TV shows with discussions, fan art, and theory channels",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Lore Master",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Fan Artist",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Event Organizer",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Fan",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🔰┃𝓲𝓷𝓯𝓸 𝓪𝓷𝓪𝓵",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the fan community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important announcements for fans",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Community rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📆┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Upcoming fan events and activities",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Event Organizer": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🌟┃𝓛𝓲𝓼𝓬𝓾𝓼𝓼𝓲𝓸𝓷𝓼",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General fan discussions"
+          },
+          {
+            "name": "🏰┃ꜱᴘᴏɪʟᴇʀꜱ",
+            "type": "text",
+            "topic": "Spoiler discussions - enter at your own risk"
+          },
+          {
+            "name": "📖┃ʟᴏʀᴇ",
+            "type": "text",
+            "topic": "Discuss lore and world-building"
+          },
+          {
+            "name": "📃┃ᴛʜᴇᴏʀɪᴇꜱ",
+            "type": "text",
+            "topic": "Share and discuss fan theories"
+          },
+          {
+            "name": "👍┃ʀᴇᴠɪᴇᴡꜱ",
+            "type": "text",
+            "topic": "Share your reviews and opinions"
+          },
+          {
+            "name": "📟┃ɴᴇᴡꜱ",
+            "type": "text",
+            "topic": "News and updates about the franchise"
+          },
+          {
+            "name": "❓┃qᴜᴇꜱᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Ask questions about the franchise"
+          }
+        ]
+      },
+      {
+        "name": "🎨┃𝓳𝓪𝓷 𝓭𝓾𝓫",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎨┃ꜰᴀɴ-ᴀʀᴛ",
+            "type": "text",
+            "topic": "Share your fan art"
+          },
+          {
+            "name": "📖┃ꜰᴀɴꜰɪᴄᴛɪᴏɴ",
+            "type": "text",
+            "topic": "Share fan fiction stories"
+          },
+          {
+            "name": "📸┃ᴄᴏꜱᴘʟᴀʏ",
+            "type": "text",
+            "topic": "Share cosplay photos and progress"
+          },
+          {
+            "name": "🎼┃ꜰᴀɴ-ᴍᴜꜱɪᴄ",
+            "type": "text",
+            "topic": "Share fan-made music and covers"
+          },
+          {
+            "name": "🎥┃ᴠɪᴅᴇᴏꜱ",
+            "type": "text",
+            "topic": "Share fan-made videos and edits"
+          },
+          {
+            "name": "🎟️┃ᴄʀᴇᴀᴛɪᴏɴ-ʜᴜʙ",
+            "type": "text",
+            "topic": "Discuss creative projects and collaborations"
+          }
+        ]
+      },
+      {
+        "name": "🍯┃𝓟𝓪𝓿𝒽𝓸𝓿𝓷",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "😻┃ᴄᴜᴛᴇ-ᴄᴏʀɴᴇʀ",
+            "type": "text",
+            "topic": "Share cute and funny moments"
+          },
+          {
+            "name": "🔊┃ᴍᴜꜱɪᴄ",
+            "type": "text",
+            "topic": "Discuss music from the franchise"
+          },
+          {
+            "name": "🎁┃ᴄᴏʟʟᴇᴄᴛɪʙʟᴇꜱ",
+            "type": "text",
+            "topic": "Discuss collectibles and merchandise"
+          },
+          {
+            "name": "🎮┃ɢᴀᴍɪɴɢ",
+            "type": "text",
+            "topic": "Game discussions and sessions with other fans"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝓱𝓸𝓲𝓬𝓮 𝓧𝓸𝓪𝓻𝓪",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🗣️┃Fan Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🌟┃Theory Discussions",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎲┃Game Night",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎭┃Watch Party",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+
+  "music": {
+    "description": "Music-focused server with channels for music discussion, sharing, and listening together",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "DJ",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true
+        }
+      },
+      {
+        "name": "Musician",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Music Enthusiast",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🎶┃𝓬𝓺𝓽𝓻𝓺①𝓬𝓽𝓬𝓺𝓷",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the music community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Server announcements and updates",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📆┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Music events and listening parties",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              },
+              "DJ": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🎼┃𝑴𝒖𝒔𝒊𝒄 𝑬𝒉𝒂𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General music discussions"
+          },
+          {
+            "name": "🔗┃ꜱʜᴀʀᴇ",
+            "type": "text",
+            "topic": "Share songs and playlists"
+          },
+          {
+            "name": "📀┃ʀᴇʟᴇᴀꜱᴇꜱ",
+            "type": "text",
+            "topic": "Discuss new music releases"
+          },
+          {
+            "name": "🎧┃ʀᴇᴄᴏᴍᴍᴇɴᴅᴀᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Music recommendations"
+          },
+          {
+            "name": "👍┃ʀᴇᴠɪᴇᴡꜱ",
+            "type": "text",
+            "topic": "Album and song reviews"
+          },
+          {
+            "name": "🔊┃ʟʏʀɪᴄꜱ",
+            "type": "text",
+            "topic": "Share and discuss song lyrics"
+          }
+        ]
+      },
+      {
+        "name": "🎹┃𝒡𝓆𝓃𝒻𝓈 & 𝑢𝑒𝓃𝓁𝓂𝓈",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎸┃ʀᴏᴄᴋ",
+            "type": "text",
+            "topic": "Rock music discussions"
+          },
+          {
+            "name": "🎷┃ʜɪᴘ-ʜᴏᴘ",
+            "type": "text",
+            "topic": "Hip-hop and rap discussions"
+          },
+          {
+            "name": "🎻┃ᴘᴏᴘ",
+            "type": "text",
+            "topic": "Pop music discussions"
+          },
+          {
+            "name": "🎹┃ᴇʟᴇᴄᴛʀᴏɴɪᴄ",
+            "type": "text",
+            "topic": "Electronic music discussions"
+          },
+          {
+            "name": "🎵┃ʀ&ʙ",
+            "type": "text",
+            "topic": "R&B and soul discussions"
+          },
+          {
+            "name": "🎤┃ɪɴᴅɪᴇ",
+            "type": "text",
+            "topic": "Indie and alternative discussions"
+          },
+          {
+            "name": "🎶┃ᴏᴛʜᴇʀ-ɢᴇɴʀᴇꜱ",
+            "type": "text",
+            "topic": "Discussions about other music genres"
+          }
+        ]
+      },
+      {
+        "name": "🎤┃𝑴𝒖𝒔𝒊𝒄𝒊𝒂𝒏 𝑣𝑙𝒂𝒄𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎵┃ɪɴꜱᴛʀᴜᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Discuss musical instruments"
+          },
+          {
+            "name": "🎥┃ᴄᴏᴠᴇʀꜱ",
+            "type": "text",
+            "topic": "Share cover performances"
+          },
+          {
+            "name": "🎶┃ᴏʀɪɢɪɴᴀʟꜱ",
+            "type": "text",
+            "topic": "Share original compositions"
+          },
+          {
+            "name": "📝┃ᴍᴜꜱɪᴄ-ᴛʜᴇᴏʀʏ",
+            "type": "text",
+            "topic": "Discuss music theory and techniques"
+          },
+          {
+            "name": "🎚┃ᴘʀᴏᴅᴜᴄᴛɪᴏɴ",
+            "type": "text",
+            "topic": "Music production discussions"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Music bot commands"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝓵𝓲𝓽𝓮 𝓶𝓾𝓼𝓲𝓬",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎵┃Music Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🎼┃Live Sessions",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎧┃Listening Party",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "🎹┃Jam Session",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎸┃Karaoke",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+
+  "support": {
+    "description": "Support server with ticket system, FAQs, and dedicated help channels",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Support Manager",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Support Agent",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Product Expert",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "User",
+        "color": "0x95A5A6",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "📫┃𝓐𝓷𝓯𝓸𝓻𝓶𝓪𝓽𝓲𝓸𝓷",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to our support server!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important support announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              },
+              "Support Manager": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "💡┃ʜᴏᴡ-ᴛᴏ",
+            "type": "text",
+            "topic": "How to use the support system",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "💬┃ꜰᴇᴇᴅʙᴀᴄᴋ",
+            "type": "text",
+            "topic": "Leave your feedback about our support",
+            "permissions": {
+              "@everyone": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🛠️┃𝓀𝓉𝓊𝓈𝓊𝒻𝓃𝓉",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📌┃ᴄʀᴇᴀᴛᴇ-ᴛɪᴄᴋᴇᴛ",
+            "type": "text",
+            "topic": "Create a support ticket",
+            "permissions": {
+              "@everyone": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "❓┃ꜰᴀqꜱ",
+            "type": "text",
+            "topic": "Frequently asked questions",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📃┃ᴋɴᴏᴡʟᴇᴅɢᴇ-ʙᴀꜱᴇ",
+            "type": "text",
+            "topic": "Common solutions and knowledge base",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "🚨┃ᴜʀɢᴇɴᴛ-ʜᴇʟᴘ",
+            "type": "text",
+            "topic": "Report urgent issues here",
+            "permissions": {
+              "@everyone": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "👤┃𝓳𝓸𝓻𝓾𝓶𝓼",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🔥┃ɢᴇɴᴇʀᴀʟ-ʜᴇʟᴘ",
+            "type": "text",
+            "topic": "General help questions"
+          },
+          {
+            "name": "💻┃ᴛᴇᴄʜɴɪᴄᴀʟ-ʜᴇʟᴘ",
+            "type": "text",
+            "topic": "Technical support questions"
+          },
+          {
+            "name": "🔍┃ꜰᴇᴀᴛᴜʀᴇ-ʀᴇqᴜᴇꜱᴛꜱ",
+            "type": "text",
+            "topic": "Request new features"
+          },
+          {
+            "name": "🐛┃ʙᴜɢ-ʀᴇᴘᴏʀᴛꜱ",
+            "type": "text",
+            "topic": "Report bugs or issues"
+          },
+          {
+            "name": "💸┃ʙɪʟʟɪɴɢ",
+            "type": "text",
+            "topic": "Billing and account questions",
+            "permissions": {
+              "@everyone": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "💾┃𝑽𝒊𝒅𝒆𝒐 𝑲𝒖𝒊𝒅𝒆𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎥┃ᴛᴜᴛᴏʀɪᴀʟꜱ",
+            "type": "text",
+            "topic": "Video tutorials for common questions",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📖┃ᴜꜱᴇʀ-ɢᴜɪᴅᴇꜱ",
+            "type": "text",
+            "topic": "Comprehensive user guides",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📈┃ᴛɪᴘꜱ-ᴀɴᴅ-ᴛʀɪᴄᴋꜱ",
+            "type": "text",
+            "topic": "Helpful tips and tricks",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "💡┃ʙᴇꜱᴛ-ᴘʀᴀᴄᴛɪᴄᴇꜱ",
+            "type": "text",
+            "topic": "Best practices and recommendations",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑽𝒐𝒊𝒄𝒆 𝑯𝒖𝒑𝒑𝒐𝒓𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🗣️┃Live Support",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎯┃Tech Help",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "📲┃Waiting Room",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "education": {
+    "description": "Educational server with study groups, resource sharing, and subject-specific channels",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Teacher",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Helper",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Student",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "📚┃𝐒𝐜𝐡𝐨𝐨𝐥 𝐌𝐧𝐟𝐨",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to our educational community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              },
+              "Teacher": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📆┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Upcoming study sessions and events",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              },
+              "Teacher": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "📝┃𝓒𝓸𝓸𝓻𝓪𝓲𝓷𝓪𝓽𝓲𝓸𝓷",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General discussions"
+          },
+          {
+            "name": "❓┃qᴜᴇꜱᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Ask questions about anything"
+          },
+          {
+            "name": "📝┃ꜱᴛᴜᴅʏ-ᴛɪᴘꜱ",
+            "type": "text",
+            "topic": "Share study tips and techniques"
+          },
+          {
+            "name": "📂┃ʀᴇꜱᴏᴜʀᴄᴇꜱ",
+            "type": "text",
+            "topic": "Share educational resources"
+          },
+          {
+            "name": "📥┃ꜰɪʟᴇ-ꜱʜᴀʀɪɴɢ",
+            "type": "text",
+            "topic": "Share useful files and documents"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          }
+        ]
+      },
+      {
+        "name": "🧠┃𝑷𝒌𝒊𝒆𝒏𝒄𝒆 𝑣𝒖𝒃𝒋𝒆𝒄𝒕𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🧠┃ᴍᴀᴛʜᴇᴍᴀᴛɪᴄꜱ",
+            "type": "text",
+            "topic": "Mathematics discussions and problems"
+          },
+          {
+            "name": "🔬┃ꜱᴄɪᴇɴᴄᴇ",
+            "type": "text",
+            "topic": "General science discussions"
+          },
+          {
+            "name": "📜┃ʟɪᴛᴇʀᴀᴛᴜʀᴇ",
+            "type": "text",
+            "topic": "Literature and language arts"
+          },
+          {
+            "name": "🌎┃ʜɪꜱᴛᴏʀʏ",
+            "type": "text",
+            "topic": "History and social studies"
+          },
+          {
+            "name": "🎨┃ᴀʀᴛꜱ",
+            "type": "text",
+            "topic": "Art and creative studies"
+          },
+          {
+            "name": "🎼┃ᴍᴜꜱɪᴄ",
+            "type": "text",
+            "topic": "Music theory and appreciation"
+          },
+          {
+            "name": "💻┃ᴄᴏᴍᴘᴜᴛᴇʀ-ꜱᴄɪᴇɴᴄᴇ",
+            "type": "text",
+            "topic": "Computer science and programming"
+          },
+          {
+            "name": "🇺🇸┃ʟᴀɴɢᴜᴀɢᴇꜱ",
+            "type": "text",
+            "topic": "Foreign language learning"
+          }
+        ]
+      },
+      {
+        "name": "📋┃𝐒𝐭𝐮𝐝𝐲 𝐆𝐫𝐨𝐮𝐩𝐬",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📊┃ᴘʀᴏɈᴇᴄᴛꜱ",
+            "type": "text",
+            "topic": "Collaborate on projects"
+          },
+          {
+            "name": "📋┃ʜᴏᴍᴇᴡᴏʀᴋ",
+            "type": "text",
+            "topic": "Homework help and questions"
+          },
+          {
+            "name": "📃┃ᴘʀᴀᴄᴛɪᴄᴇ",
+            "type": "text",
+            "topic": "Practice problems and exercises"
+          },
+          {
+            "name": "📆┃ꜱᴛᴜᴅʏ-ꜱᴄʜᴇᴅᴜʟᴇ",
+            "type": "text",
+            "topic": "Organize study sessions"
+          },
+          {
+            "name": "📖┃ʀᴇᴀᴅɪɴɢ-ᴄʟᴜʙ",
+            "type": "text",
+            "topic": "Book discussions and recommendations"
+          },
+          {
+            "name": "🎓┃ᴜɴɪᴠᴇʀꜱɪᴛʏ",
+            "type": "text",
+            "topic": "College and university discussions"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑹𝒐𝒊𝒄𝒆 𝑧𝒂𝒍𝒍𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📚┃Study Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "📒┃Group Study 1",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "📒┃Group Study 2",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "📝┃Tutoring Room",
+            "type": "voice",
+            "user_limit": 2
+          },
+          {
+            "name": "🎙️┃Lecture Hall",
+            "type": "voice",
+            "user_limit": 30
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+
+  "art": {
+    "description": "Art community server with channels for different art forms, feedback, and collaborations",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Professional Artist",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Gallery Curator",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Event Organizer",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Artist",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🎨┃𝐔𝐚𝐥𝐥𝐞𝐫𝐲 𝐈𝐧𝐟𝐨",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to our art community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📆┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Art events, contests, and challenges",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Event Organizer": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📷┃ɪɴᴛʀᴏᴅᴜᴄᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Introduce yourself and your art"
+          }
+        ]
+      },
+      {
+        "name": "🎧┃𝓒𝓸𝓶𝓶𝓾𝓷𝓲𝓽𝔂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General art discussions"
+          },
+          {
+            "name": "💡┃ɪɴꜱᴘɪʀᴀᴛɪᴏɴ",
+            "type": "text",
+            "topic": "Share inspirational art and ideas"
+          },
+          {
+            "name": "📰┃ᴀʀᴛ-ɴᴇᴡꜱ",
+            "type": "text",
+            "topic": "Art news, trends, and articles"
+          },
+          {
+            "name": "🌠┃ʀᴇꜱᴏᴜʀᴄᴇꜱ",
+            "type": "text",
+            "topic": "Share art resources and tutorials"
+          },
+          {
+            "name": "👝┃ᴄᴏᴍᴍɪꜱꜱɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Commission information and requests"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          }
+        ]
+      },
+      {
+        "name": "📸┃𝓔𝓻𝓽 𝓀𝓪𝓵𝓵𝓮𝓻𝔂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎨┃ᴅɪɢɪᴛᴀʟ-ᴀʀᴛ",
+            "type": "text",
+            "topic": "Digital art and illustrations"
+          },
+          {
+            "name": "🎥┃ᴛʀᴀᴅɪᴛɪᴏɴᴀʟ-ᴀʀᴛ",
+            "type": "text",
+            "topic": "Traditional art (paintings, drawings, etc.)"
+          },
+          {
+            "name": "📷┃ᴘʜᴏᴛᴏɢʀᴀᴘʜʏ",
+            "type": "text",
+            "topic": "Photography showcase"
+          },
+          {
+            "name": "💍┃ᴄʀᴀꜰᴛꜱ",
+            "type": "text",
+            "topic": "Crafts and handmade items"
+          },
+          {
+            "name": "🧜┃ᴄᴏꜱᴘʟᴀʏ",
+            "type": "text",
+            "topic": "Cosplay and costume design"
+          },
+          {
+            "name": "🎼┃ᴍᴜꜱɪᴄ",
+            "type": "text",
+            "topic": "Music and audio art"
+          },
+          {
+            "name": "🎟️┃ᴀɴɪᴍᴀᴛɪᴏɴ",
+            "type": "text",
+            "topic": "Animation and motion design"
+          },
+          {
+            "name": "🌱┃ᴏᴛʜᴇʀ-ᴀʀᴛ",
+            "type": "text",
+            "topic": "Other art forms and experiments"
+          }
+        ]
+      },
+      {
+        "name": "🗒️┃𝐏𝐞𝐞𝐝𝐛𝐚𝐜𝐤 𝐇𝐮𝐛",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📋┃ᴄʀɪᴛɪƣᴜᴇ",
+            "type": "text",
+            "topic": "Request and receive constructive criticism"
+          },
+          {
+            "name": "💡┃ɪᴍᴘʀᴏᴠᴇᴍᴇɴᴛ",
+            "type": "text",
+            "topic": "Tips for improving your art"
+          },
+          {
+            "name": "📚┃ʟᴇᴀʀɴɪɴɢ",
+            "type": "text",
+            "topic": "Art learning resources and studies"
+          },
+          {
+            "name": "🛠️┃ᴛᴇᴄʜɴɪƣᴜᴇꜱ",
+            "type": "text",
+            "topic": "Art techniques and discussions"
+          },
+          {
+            "name": "📦┃ᴡɪᴘꜱ",
+            "type": "text",
+            "topic": "Works in progress"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑽𝒐𝒊𝒄𝒆 𝑪𝒉𝒂𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎨┃Art Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🎥┃Art Workshop",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "🎙️┃Critique Session",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "📣┃Event Hall",
+            "type": "voice",
+            "user_limit": 30
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "business": {
+    "description": "Business and entrepreneurship server with networking, marketing, and resource channels",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Business Mentor",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Industry Expert",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Entrepreneur",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Networker",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "💼┃𝐒𝐞𝐫𝐯𝐞𝐫 𝐈𝐧𝐟𝐨",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to our business community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important announcements and updates",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "👤┃ɪɴᴛʀᴏᴅᴜᴄᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Introduce yourself and your business"
+          },
+          {
+            "name": "📆┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Upcoming business events and webinars",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              },
+              "Business Mentor": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "💰┃𝓛𝓲𝓼𝓬𝓾𝓼𝓼𝓲𝓸𝓷",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General business discussions"
+          },
+          {
+            "name": "📢┃ᴍᴀʀᴋᴇᴛɪɴɢ",
+            "type": "text",
+            "topic": "Marketing strategies and discussions"
+          },
+          {
+            "name": "💳┃ꜰɪɴᴀɴᴄᴇ",
+            "type": "text",
+            "topic": "Financial advice and discussions"
+          },
+          {
+            "name": "🗂️┃ꜱᴛᴀʀᴛᴜᴘꜱ",
+            "type": "text",
+            "topic": "Startup discussions and advice"
+          },
+          {
+            "name": "📈┃ɪɴᴠᴇꜱᴛɪɴɢ",
+            "type": "text",
+            "topic": "Investment strategies and advice"
+          },
+          {
+            "name": "📚┃ʟᴇɢᴀʟ-ᴀᴅᴠɪᴄᴇ",
+            "type": "text",
+            "topic": "Legal advice and compliance discussions"
+          },
+          {
+            "name": "🗠┃ᴛᴇᴄʜɴᴏʟᴏɢʏ",
+            "type": "text",
+            "topic": "Tech and business tools discussions"
+          }
+        ]
+      },
+      {
+        "name": "🧑‍💻┃𝓧𝓲𝓬𝓱𝓮 𝓞𝓸𝓻𝓴𝓲𝓷𝓰",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💼┃ʜɪʀɪɴɢ",
+            "type": "text",
+            "topic": "Job postings and hiring discussions"
+          },
+          {
+            "name": "📂┃ʀᴇꜱᴜᴍᴇꜱ",
+            "type": "text",
+            "topic": "Share your resume and get feedback"
+          },
+          {
+            "name": "📝┃ꜱᴋɪʟʟꜱ",
+            "type": "text",
+            "topic": "Skill development and learning resources"
+          },
+          {
+            "name": "📃┃ʜᴏᴍᴇ-ᴏꜰꜰɪᴄᴇ",
+            "type": "text",
+            "topic": "Remote work and home office discussions"
+          },
+          {
+            "name": "🧑‍💼┃ᴘʀᴏꜰᴇꜱꜱɪᴏɴᴀʟ",
+            "type": "text",
+            "topic": "Professional development and growth"
+          }
+        ]
+      },
+      {
+        "name": "👥┃𝓟𝓮𝓽𝔀𝓸𝓻𝓴𝓲𝓷𝓰",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👥┃ɴᴇᴛᴡᴏʀᴋɪɴɢ",
+            "type": "text",
+            "topic": "Connect with other business professionals"
+          },
+          {
+            "name": "🤝┃ᴘᴀʀᴛɴᴇʀꜱʜɪᴘꜱ",
+            "type": "text",
+            "topic": "Find business partners and collaborators"
+          },
+          {
+            "name": "👨‍💻┃ᴍᴇɴᴛᴏʀꜱʜɪᴘ",
+            "type": "text",
+            "topic": "Mentoring opportunities and discussions"
+          },
+          {
+            "name": "💡┃ʚᴏɪɴᴛ-ᴠᴇɴᴛᴜʀᴇꜱ",
+            "type": "text",
+            "topic": "Collaborative ventures and projects"
+          },
+          {
+            "name": "👔┃ɪɴᴅᴜꜱᴛʀʏ-ᴛᴀʟᴋ",
+            "type": "text",
+            "topic": "Industry-specific discussions"
+          }
+        ]
+      },
+      {
+        "name": "📋┃𝓫𝓮𝓼𝓸𝓾𝓻𝓬𝓮𝓼",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📓┃ʙᴜꜱɪɴᴇꜱꜱ-ᴘʟᴀɴꜱ",
+            "type": "text",
+            "topic": "Business planning and strategy"
+          },
+          {
+            "name": "🌟┃ꜱᴜᴄᴄᴇꜱꜱ-ꜱᴛᴏʀɪᴇꜱ",
+            "type": "text",
+            "topic": "Share business success stories"
+          },
+          {
+            "name": "📋┃ʀᴇꜱᴏᴜʀᴄᴇꜱ",
+            "type": "text",
+            "topic": "Business resources and tools"
+          },
+          {
+            "name": "📖┃ʙᴏᴏᴋꜱ",
+            "type": "text",
+            "topic": "Book recommendations and discussions"
+          },
+          {
+            "name": "🌐┃ɴᴇᴡꜱʟᴇᴛᴛᴇʀ",
+            "type": "text",
+            "topic": "Subscribe to our business newsletter",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "🤖┃ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅꜱ",
+            "type": "text",
+            "topic": "Use bot commands here"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝓱𝓸𝓲𝓬𝓮 𝓧𝓱𝓪𝓽",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💼┃Business Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🌐┃Networking",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "📊┃Strategy Session",
+            "type": "voice",
+            "user_limit": 8
+          },
+          {
+            "name": "💸┃Consulting Call",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "🎙️┃Conference Room",
+            "type": "voice",
+            "user_limit": 30
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "botsupport": {
+    "description": "Official bot support server template with tickets, announcements, and community channels",
+    "roles": [
+      {
+        "name": "Bot Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Support Team",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Helper",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Bot Developer",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Server Booster",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Member",
+        "color": "0x95A5A6",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "📢┃Information",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true,
+            "send_messages": false
+          }
+        },
+        "channels": [
+          {
+            "name": "welcome",
+            "type": "text",
+            "topic": "Welcome to the official bot support server!"
+          },
+          {
+            "name": "announcements",
+            "type": "text",
+            "topic": "Bot updates and announcements"
+          },
+          {
+            "name": "changelog",
+            "type": "text",
+            "topic": "Bot version changes and updates"
+          },
+          {
+            "name": "rules",
+            "type": "text",
+            "topic": "Server rules and guidelines"
+          }
+        ]
+      },
+      {
+        "name": "🎫┃Support",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "create-ticket",
+            "type": "text",
+            "topic": "Create a support ticket"
+          },
+          {
+            "name": "support-chat",
+            "type": "text",
+            "topic": "General support discussions"
+          },
+          {
+            "name": "faq",
+            "type": "text",
+            "topic": "Frequently asked questions"
+          },
+          {
+            "name": "bug-reports",
+            "type": "text",
+            "topic": "Report bugs and issues"
+          }
+        ]
+      },
+      {
+        "name": "💬┃Community",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "general",
+            "type": "text",
+            "topic": "General discussions"
+          },
+          {
+            "name": "bot-commands",
+            "type": "text",
+            "topic": "Use bot commands here"
+          },
+          {
+            "name": "suggestions",
+            "type": "text",
+            "topic": "Suggest new features"
+          },
+          {
+            "name": "showcase",
+            "type": "text",
+            "topic": "Share your server setups"
+          }
+        ]
+      },
+      {
+        "name": "🔊┃Voice Channels",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "General Voice",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "Support Voice",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  "tech": {
+    "description": "Technology and programming server with coding help, project collaboration, and tech discussions",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Senior Developer",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Developer",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Tech Enthusiast",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "💻┃𝒰𝒪𝒾𝒼𝓃 𝒤𝒳𝓃𝓉",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to our tech community!",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important server announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Admin": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "📜┃ʀᴜʟᴇꜱ",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "👤┃ɪɴᴛʀᴏᴅᴜᴄᴛɪᴏɴꜱ",
+            "type": "text",
+            "topic": "Introduce yourself and your technical interests"
+          },
+          {
+            "name": "💡┃ʀᴇꜱᴏᴜʀᴄᴇꜱ",
+            "type": "text",
+            "topic": "Useful tech resources and links",
+            "permissions": {
+              "@everyone": {
+                "send_messages": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "🛠️┃𝒰𝓈𝓪𝒾𝓃𝒶𝓉𝒼𝒾",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💻┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General programming discussions"
+          },
+          {
+            "name": "🔀┃ᴄᴏᴅᴇ-ʜᴇʟᴘ",
+            "type": "text",
+            "topic": "Get help with your code"
+          },
+          {
+            "name": "💼┃ᴄᴀʀᴇᴇʀꜱ",
+            "type": "text",
+            "topic": "Tech career advice and job hunting"
+          },
+          {
+            "name": "📂┃ᴘʀᴏʚᴇᴄᴛꜱ",
+            "type": "text",
+            "topic": "Share your projects and get feedback"
+          },
+          {
+            "name": "🕹️┃ᴀʟɢᴏʀɪᴛʜᴍꜱ",
+            "type": "text",
+            "topic": "Algorithm discussions and challenges"
+          },
+          {
+            "name": "📋┃ʜᴀᴄᴋɪɴɢ",
+            "type": "text",
+            "topic": "CTFs, security, and ethical hacking"
+          },
+          {
+            "name": "💰┃ᴄʀʏᴘᴛᴏ",
+            "type": "text",
+            "topic": "Blockchain and cryptocurrency discussions"
+          }
+        ]
+      },
+      {
+        "name": "👨‍💻┃𝓛𝓮𝓽 𝒵𝒮𝒷𝓀𝓊",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👨‍💻┃ɐᴠᴀ-ʚᴀᴠᴀꜱᴄʀɪᴘᴛ",
+            "type": "text",
+            "topic": "JavaScript programming discussions"
+          },
+          {
+            "name": "🐍┃ᴘʏᴛʜᴏɴ",
+            "type": "text",
+            "topic": "Python programming discussions"
+          },
+          {
+            "name": "👊┃ʚᴀᴠᴀ",
+            "type": "text",
+            "topic": "Java programming discussions"
+          },
+          {
+            "name": "🔥┃ᴄᴘʟᴜꜱᴘʟᴜꜱ",
+            "type": "text",
+            "topic": "C, C++, C# programming discussions"
+          },
+          {
+            "name": "💎┃ʀᴜʙʏ",
+            "type": "text",
+            "topic": "Ruby programming discussions"
+          },
+          {
+            "name": "🚀┃ʀᴜꜱᴛ",
+            "type": "text",
+            "topic": "Rust programming discussions"
+          },
+          {
+            "name": "🌱┃ᴏᴛʜᴇʀ-ʟᴀɴɢꜱ",
+            "type": "text",
+            "topic": "Other programming languages"
+          }
+        ]
+      },
+      {
+        "name": "🌐┃𝒈𝒆𝒃 𝑳𝒆𝒇",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🌐┃ᴡᴇʙ-ᴅᴇᴠ",
+            "type": "text",
+            "topic": "Web development discussions"
+          },
+          {
+            "name": "👽┃ʀᴇᴀᴄᴛ",
+            "type": "text",
+            "topic": "React, Next.js, and related frameworks"
+          },
+          {
+            "name": "🐌┃ᴏᴛʜᴇʀ-ꜰʀᴀᴍᴇᴡᴏʀᴋꜱ",
+            "type": "text",
+            "topic": "Vue, Angular, Svelte, and other frameworks"
+          },
+          {
+            "name": "💦┃ᴄꜱꜱ",
+            "type": "text",
+            "topic": "CSS, styling, and design"
+          },
+          {
+            "name": "🏡┃ʙᴀᴄᴋᴇɴᴅ",
+            "type": "text",
+            "topic": "Backend technologies and frameworks"
+          },
+          {
+            "name": "📱┃ᴍᴏʙɪʟᴇ",
+            "type": "text",
+            "topic": "Mobile app development"
+          }
+        ]
+      },
+      {
+        "name": "💠┃𝒰𝒪𝒲𝒼𝓉𝒹𝒸𝒮𝒹𝓂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📊┃ᴅᴀᴛᴀ-ꜱᴄɪᴇɴᴄᴇ",
+            "type": "text",
+            "topic": "Data science, ML, and AI discussions"
+          },
+          {
+            "name": "🐈┃ᴅᴇᴠᴏᴘꜱ",
+            "type": "text",
+            "topic": "DevOps, CI/CD, and deployment"
+          },
+          {
+            "name": "📔┃ᴅʙᴀ",
+            "type": "text",
+            "topic": "Databases and data storage"
+          },
+          {
+            "name": "🗼┃ɢᴀᴍᴇ-ᴅᴇᴠ",
+            "type": "text",
+            "topic": "Game development"
+          },
+          {
+            "name": "🤖┃ʙᴏᴛꜱ",
+            "type": "text",
+            "topic": "Bot development and automation"
+          },
+          {
+            "name": "🔐┃ꜱᴇᴄᴜʀɪᴛʏ",
+            "type": "text",
+            "topic": "Cybersecurity and privacy"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑽𝒐𝒊𝒄𝒆 𝑪𝒉𝒂𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💻┃Tech Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "📭┃Pair Programming",
+            "type": "voice",
+            "user_limit": 2
+          },
+          {
+            "name": "📂┃Project Collab",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "📚┃Study Group",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "🎙️┃Tech Talk",
+            "type": "voice",
+            "user_limit": 20
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  
+  "serverhub": {
+    "description": "A comprehensive Server Hub with 50+ channels organized into categories",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true,
+          "mention_everyone": true,
+          "mute_members": true,
+          "deafen_members": true,
+          "move_members": true,
+          "manage_nicknames": true,
+          "manage_webhooks": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true,
+          "deafen_members": true,
+          "move_members": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Support",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "VIP",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true,
+          "attach_files": true,
+          "add_reactions": true,
+          "external_emojis": true
+        }
+      },
+      {
+        "name": "Member",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "embed_links": true,
+          "attach_files": true,
+          "add_reactions": true,
+          "external_emojis": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true,
+          "stream": true,
+          "use_voice_activation": true
+        }
+      },
+      {
+        "name": "Bots",
+        "color": "0x95A5A6",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Developer",
+        "color": "0xE67E22",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": false,
+          "manage_webhooks": true
+        }
+      },
+      {
+        "name": "Tester",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Content Creator",
+        "color": "0xF39C12",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true
+        }
+      },
+      {
+        "name": "Server Booster",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true
+        }
+      },
+      {
+        "name": "Event Organizer",
+        "color": "0xDC143C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "move_members": true
+        }
+      },
+      {
+        "name": "Donator",
+        "color": "0xFFA500",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Partner",
+        "color": "0x7FFFD4",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Game Master",
+        "color": "0x800080",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "move_members": true
+        }
+      },
+      {
+        "name": "Staff",
+        "color": "0x40E0D0",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Artist",
+        "color": "0xDA70D6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Musician",
+        "color": "0xB22222",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Writer",
+        "color": "0x4682B4",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Streamer",
+        "color": "0x8A2BE2",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true
+        }
+      },
+      {
+        "name": "Designer",
+        "color": "0x20B2AA",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Translator",
+        "color": "0x48D1CC",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Bot Developer",
+        "color": "0x008080",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Giveaway Manager",
+        "color": "0x00CED1",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Server Expert",
+        "color": "0x5F9EA0",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      }
+    ],
+    "categories": [
+      {
+        "name": "🔒┃Private",
+        "permissions": {
+          "Admin": {
+            "view_channel": true,
+            "send_messages": true
+          },
+          "Moderator": {
+            "view_channel": true,
+            "send_messages": true
+          },
+          "@everyone": {
+            "view_channel": false
+          }
+        },
+        "channels": [
+          {
+            "name": "admin-chat",
+            "type": "text",
+            "topic": "Private channel for server administrators"
+          },
+          {
+            "name": "mod-chat",
+            "type": "text",
+            "topic": "Private channel for server moderators"
+          },
+          {
+            "name": "staff-announcements",
+            "type": "text",
+            "topic": "Announcements for staff members"
+          },
+          {
+            "name": "staff-meeting",
+            "type": "voice"
+          }
+        ]
+      },
+      {
+        "name": "🗣️┃General",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "welcome",
+            "type": "text",
+            "topic": "Welcome to the server!"
+          },
+          {
+            "name": "rules",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "announcements",
+            "type": "text",
+            "topic": "Server announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "general-chat",
+            "type": "text",
+            "topic": "General discussion"
+          },
+          {
+            "name": "introductions",
+            "type": "text",
+            "topic": "Introduce yourself to the community"
+          },
+          {
+            "name": "off-topic",
+            "type": "text",
+            "topic": "Discussions that don't fit elsewhere"
+          },
+          {
+            "name": "memes",
+            "type": "text",
+            "topic": "Share your favorite memes"
+          }
+        ]
+      },
+      {
+        "name": "🎮┃Gaming",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "game-discussion",
+            "type": "text",
+            "topic": "Discuss games and gaming news"
+          },
+          {
+            "name": "minecraft",
+            "type": "text",
+            "topic": "Minecraft discussions and server info"
+          },
+          {
+            "name": "fortnite",
+            "type": "text",
+            "topic": "Fortnite discussions and squad-ups"
+          },
+          {
+            "name": "valorant",
+            "type": "text",
+            "topic": "Valorant discussions and team-ups"
+          },
+          {
+            "name": "league-of-legends",
+            "type": "text",
+            "topic": "League of Legends discussions"
+          },
+          {
+            "name": "csgo",
+            "type": "text",
+            "topic": "CS:GO discussions and matches"
+          },
+          {
+            "name": "apex-legends",
+            "type": "text",
+            "topic": "Apex Legends discussions"
+          },
+          {
+            "name": "among-us",
+            "type": "text",
+            "topic": "Among Us discussions and looking for players"
+          },
+          {
+            "name": "genshin-impact",
+            "type": "text",
+            "topic": "Genshin Impact discussions and tips"
+          },
+          {
+            "name": "other-games",
+            "type": "text",
+            "topic": "Discussions about other games"
+          }
+        ]
+      },
+      {
+        "name": "🎤┃Voice Channels",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "General Voice",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "Gaming #1",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Gaming #2",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Gaming #3",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Music",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Chill Zone",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      },
+      {
+        "name": "🎉┃Events",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "events-announcements",
+            "type": "text",
+            "topic": "Upcoming server events",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Event Organizer": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "giveaways",
+            "type": "text",
+            "topic": "Server giveaways",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Giveaway Manager": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "event-planning",
+            "type": "text",
+            "topic": "Plan and discuss server events",
+            "permissions": {
+              "Event Organizer": {
+                "view_channel": true
+              },
+              "@everyone": {
+                "view_channel": false
+              }
+            }
+          },
+          {
+            "name": "event-voice",
+            "type": "voice",
+            "user_limit": 30
+          }
+        ]
+      },
+      {
+        "name": "📜┃Information",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true,
+            "send_messages": false
+          },
+          "Admin": {
+            "send_messages": true
+          }
+        },
+        "channels": [
+          {
+            "name": "server-info",
+            "type": "text",
+            "topic": "Information about the server"
+          },
+          {
+            "name": "faq",
+            "type": "text",
+            "topic": "Frequently asked questions"
+          },
+          {
+            "name": "roles-info",
+            "type": "text",
+            "topic": "Information about server roles"
+          },
+          {
+            "name": "updates",
+            "type": "text",
+            "topic": "Server updates and changes"
+          }
+        ]
+      },
+      {
+        "name": "💬┃Community",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "suggestions",
+            "type": "text",
+            "topic": "Suggest improvements for the server"
+          },
+          {
+            "name": "feedback",
+            "type": "text",
+            "topic": "Share your feedback about the server"
+          },
+          {
+            "name": "polls",
+            "type": "text",
+            "topic": "Community polls and voting"
+          },
+          {
+            "name": "self-roles",
+            "type": "text",
+            "topic": "Get roles by reacting to messages"
+          }
+        ]
+      },
+      {
+        "name": "🎶┃Music",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "music-commands",
+            "type": "text",
+            "topic": "Commands for music bots"
+          },
+          {
+            "name": "music-discussion",
+            "type": "text",
+            "topic": "Discuss music and share recommendations"
+          },
+          {
+            "name": "music-room",
+            "type": "voice",
+            "user_limit": 15
+          }
+        ]
+      },
+      {
+        "name": "💼┃Business",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "partnerships",
+            "type": "text",
+            "topic": "Server partnerships and collaborations",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Partner": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "advertising",
+            "type": "text",
+            "topic": "Advertise your content (with permission)"
+          },
+          {
+            "name": "business-talk",
+            "type": "text",
+            "topic": "Business discussions"
+          }
+        ]
+      },
+      {
+        "name": "📚┃Learning",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "study-group",
+            "type": "text",
+            "topic": "Study together with other members"
+          },
+          {
+            "name": "resources",
+            "type": "text",
+            "topic": "Share and find educational resources"
+          },
+          {
+            "name": "programming",
+            "type": "text",
+            "topic": "Programming discussions and help"
+          },
+          {
+            "name": "languages",
+            "type": "text",
+            "topic": "Language learning and practice"
+          }
+        ]
+      },
+      {
+        "name": "📢┃Announcements",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true,
+            "send_messages": false
+          },
+          "Admin": {
+            "send_messages": true
+          }
+        },
+        "channels": [
+          {
+            "name": "server-news",
+            "type": "text",
+            "topic": "News and updates about the server"
+          },
+          {
+            "name": "partner-announcements",
+            "type": "text",
+            "topic": "Announcements from server partners"
+          },
+          {
+            "name": "content-updates",
+            "type": "text",
+            "topic": "Updates from content creators"
+          }
+        ]
+      }
+    ]
+  },
+  "gaming": {
+    "description": "A gaming community server with game-specific channels",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true,
+          "mention_everyone": true,
+          "mute_members": true,
+          "deafen_members": true,
+          "move_members": true,
+          "manage_nicknames": true,
+          "manage_webhooks": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true,
+          "deafen_members": true,
+          "move_members": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Game Master",
+        "color": "0x800080",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "move_members": true
+        }
+      },
+      {
+        "name": "Twitch Streamer",
+        "color": "0x9146FF",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true
+        }
+      },
+      {
+        "name": "YouTuber",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true
+        }
+      },
+      {
+        "name": "Tournament Organizer",
+        "color": "0xDC143C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "move_members": true
+        }
+      },
+      {
+        "name": "Pro Gamer",
+        "color": "0x7CFC00",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Casual Gamer",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Server Booster",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true
+        }
+      },
+      {
+        "name": "Minecraft",
+        "color": "0x2ECC71",
+        "hoist": false,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Fortnite",
+        "color": "0x9B59B6",
+        "hoist": false,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Valorant",
+        "color": "0xE74C3C",
+        "hoist": false,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "League of Legends",
+        "color": "0x3498DB",
+        "hoist": false,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "CS:GO",
+        "color": "0xF39C12",
+        "hoist": false,
+        "mentionable": true,
+        "permissions": {}
+      }
+    ],
+    "categories": [
+      {
+        "name": "🔒┃Server Info",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true,
+            "send_messages": false
+          },
+          "Admin": {
+            "send_messages": true
+          }
+        },
+        "channels": [
+          {
+            "name": "welcome",
+            "type": "text",
+            "topic": "Welcome to the Gaming Server!"
+          },
+          {
+            "name": "rules",
+            "type": "text",
+            "topic": "Server rules - please read carefully"
+          },
+          {
+            "name": "announcements",
+            "type": "text",
+            "topic": "Server announcements and updates"
+          },
+          {
+            "name": "self-roles",
+            "type": "text",
+            "topic": "Get roles by reacting to messages"
+          }
+        ]
+      },
+      {
+        "name": "🎮┃General Channels",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "general-chat",
+            "type": "text",
+            "topic": "General gaming discussions"
+          },
+          {
+            "name": "memes",
+            "type": "text",
+            "topic": "Gaming memes and funny content"
+          },
+          {
+            "name": "looking-for-group",
+            "type": "text",
+            "topic": "Find players to game with"
+          },
+          {
+            "name": "game-news",
+            "type": "text",
+            "topic": "Latest gaming news and updates"
+          }
+        ]
+      },
+      {
+        "name": "🔫┃FPS Games",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "valorant",
+            "type": "text",
+            "topic": "Valorant discussions and team-ups"
+          },
+          {
+            "name": "csgo",
+            "type": "text",
+            "topic": "CS:GO discussions and matches"
+          },
+          {
+            "name": "apex-legends",
+            "type": "text",
+            "topic": "Apex Legends discussions"
+          },
+          {
+            "name": "call-of-duty",
+            "type": "text",
+            "topic": "Call of Duty discussions"
+          },
+          {
+            "name": "fortnite",
+            "type": "text",
+            "topic": "Fortnite discussions and squad-ups"
+          }
+        ]
+      },
+      {
+        "name": "🧙‍♂️┃RPG & MOBA",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "league-of-legends",
+            "type": "text",
+            "topic": "League of Legends discussions"
+          },
+          {
+            "name": "dota-2",
+            "type": "text",
+            "topic": "Dota 2 discussions"
+          },
+          {
+            "name": "world-of-warcraft",
+            "type": "text",
+            "topic": "World of Warcraft discussions"
+          },
+          {
+            "name": "genshin-impact",
+            "type": "text",
+            "topic": "Genshin Impact discussions and tips"
+          },
+          {
+            "name": "elder-scrolls",
+            "type": "text",
+            "topic": "Elder Scrolls discussions"
+          }
+        ]
+      },
+      {
+        "name": "⛏️┃Minecraft",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "minecraft-general",
+            "type": "text",
+            "topic": "General Minecraft discussions"
+          },
+          {
+            "name": "minecraft-server",
+            "type": "text",
+            "topic": "Community Minecraft server info"
+          },
+          {
+            "name": "builds-and-creations",
+            "type": "text",
+            "topic": "Share your Minecraft builds"
+          },
+          {
+            "name": "minecraft-mods",
+            "type": "text",
+            "topic": "Discuss Minecraft mods and plugins"
+          }
+        ]
+      },
+      {
+        "name": "🎲┃Other Games",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "among-us",
+            "type": "text",
+            "topic": "Among Us discussions and looking for players"
+          },
+          {
+            "name": "roblox",
+            "type": "text",
+            "topic": "Roblox discussions"
+          },
+          {
+            "name": "rocket-league",
+            "type": "text",
+            "topic": "Rocket League discussions"
+          },
+          {
+            "name": "indie-games",
+            "type": "text",
+            "topic": "Indie game discussions"
+          },
+          {
+            "name": "nintendo",
+            "type": "text",
+            "topic": "Nintendo game discussions"
+          }
+        ]
+      },
+      {
+        "name": "🏆┃Events & Tournaments",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          },
+          "Tournament Organizer": {
+            "manage_channels": true,
+            "manage_messages": true
+          }
+        },
+        "channels": [
+          {
+            "name": "tournament-announcements",
+            "type": "text",
+            "topic": "Tournament and event announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Tournament Organizer": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "tournament-signups",
+            "type": "text",
+            "topic": "Sign up for upcoming tournaments"
+          },
+          {
+            "name": "tournament-results",
+            "type": "text",
+            "topic": "Tournament results and standings"
+          }
+        ]
+      },
+      {
+        "name": "🎤┃Voice Channels",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "General Voice",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "FPS Squad #1",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "FPS Squad #2",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "MOBA Team",
+            "type": "voice",
+            "user_limit": 5
+          },
+          {
+            "name": "Minecraft",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Among Us",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Stream Room",
+            "type": "voice",
+            "user_limit": 20
+          },
+          {
+            "name": "AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  "community": {
+    "description": "A general community server for socializing and discussions",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true,
+          "mention_everyone": true,
+          "mute_members": true,
+          "deafen_members": true,
+          "move_members": true,
+          "manage_nicknames": true,
+          "manage_webhooks": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true,
+          "deafen_members": true,
+          "move_members": true,
+          "view_audit_log": true
+        }
+      },
+      {
+        "name": "Server Booster",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true
+        }
+      },
+      {
+        "name": "VIP",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "stream": true,
+          "attach_files": true,
+          "add_reactions": true,
+          "external_emojis": true
+        }
+      },
+      {
+        "name": "Active Member",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "Member",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "embed_links": true,
+          "attach_files": true,
+          "add_reactions": true,
+          "external_emojis": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true,
+          "stream": true,
+          "use_voice_activation": true
+        }
+      },
+      {
+        "name": "Event Organizer",
+        "color": "0xDC143C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true,
+          "move_members": true
+        }
+      },
+      {
+        "name": "Artist",
+        "color": "0xDA70D6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Writer",
+        "color": "0x4682B4",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Photographer",
+        "color": "0x20B2AA",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Musician",
+        "color": "0xB22222",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Chef",
+        "color": "0xF4A460",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Gamer",
+        "color": "0x7CFC00",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Movie Buff",
+        "color": "0x8A2BE2",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      }
+    ],
+    "categories": [
+      {
+        "name": "📌┃Information",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true,
+            "send_messages": false
+          },
+          "Admin": {
+            "send_messages": true
+          }
+        },
+        "channels": [
+          {
+            "name": "welcome",
+            "type": "text",
+            "topic": "Welcome to our community!"
+          },
+          {
+            "name": "rules",
+            "type": "text",
+            "topic": "Community rules and guidelines"
+          },
+          {
+            "name": "announcements",
+            "type": "text",
+            "topic": "Important community announcements"
+          },
+          {
+            "name": "roles-info",
+            "type": "text",
+            "topic": "Information about server roles"
+          }
+        ]
+      },
+      {
+        "name": "🗣️┃General",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "general-chat",
+            "type": "text",
+            "topic": "General conversation"
+          },
+          {
+            "name": "introductions",
+            "type": "text",
+            "topic": "Introduce yourself to the community"
+          },
+          {
+            "name": "memes",
+            "type": "text",
+            "topic": "Share your favorite memes"
+          },
+          {
+            "name": "off-topic",
+            "type": "text",
+            "topic": "Discussions that don't fit elsewhere"
+          }
+        ]
+      },
+      {
+        "name": "🎨┃Creative",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "art-showcase",
+            "type": "text",
+            "topic": "Share your artwork"
+          },
+          {
+            "name": "photography",
+            "type": "text",
+            "topic": "Share your photos"
+          },
+          {
+            "name": "writing",
+            "type": "text",
+            "topic": "Share your writing"
+          },
+          {
+            "name": "music",
+            "type": "text",
+            "topic": "Share and discuss music"
+          }
+        ]
+      },
+      {
+        "name": "🍿┃Entertainment",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "movies-tv",
+            "type": "text",
+            "topic": "Discuss movies and TV shows"
+          },
+          {
+            "name": "gaming",
+            "type": "text",
+            "topic": "Gaming discussions"
+          },
+          {
+            "name": "books",
+            "type": "text",
+            "topic": "Book recommendations and discussions"
+          },
+          {
+            "name": "anime-manga",
+            "type": "text",
+            "topic": "Anime and manga discussions"
+          }
+        ]
+      },
+      {
+        "name": "🍔┃Lifestyle",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "food-cooking",
+            "type": "text",
+            "topic": "Share recipes and food pictures"
+          },
+          {
+            "name": "fitness",
+            "type": "text",
+            "topic": "Fitness and health discussions"
+          },
+          {
+            "name": "fashion",
+            "type": "text",
+            "topic": "Fashion discussions and advice"
+          },
+          {
+            "name": "pets",
+            "type": "text",
+            "topic": "Share pictures and stories about your pets"
+          }
+        ]
+      },
+      {
+        "name": "🎓┃Learning",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "technology",
+            "type": "text",
+            "topic": "Technology discussions and help"
+          },
+          {
+            "name": "science",
+            "type": "text",
+            "topic": "Science discussions"
+          },
+          {
+            "name": "languages",
+            "type": "text",
+            "topic": "Language learning and practice"
+          },
+          {
+            "name": "history",
+            "type": "text",
+            "topic": "History discussions"
+          }
+        ]
+      },
+      {
+        "name": "🎉┃Events",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "event-announcements",
+            "type": "text",
+            "topic": "Community event announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              },
+              "Event Organizer": {
+                "send_messages": true
+              }
+            }
+          },
+          {
+            "name": "event-planning",
+            "type": "text",
+            "topic": "Plan and discuss community events",
+            "permissions": {
+              "Event Organizer": {
+                "view_channel": true
+              },
+              "@everyone": {
+                "view_channel": false
+              }
+            }
+          },
+          {
+            "name": "giveaways",
+            "type": "text",
+            "topic": "Community giveaways"
+          }
+        ]
+      },
+      {
+        "name": "💬┃Feedback",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "suggestions",
+            "type": "text",
+            "topic": "Suggest improvements for the community"
+          },
+          {
+            "name": "feedback",
+            "type": "text",
+            "topic": "Share your feedback about the community"
+          },
+          {
+            "name": "polls",
+            "type": "text",
+            "topic": "Community polls and voting"
+          }
+        ]
+      },
+      {
+        "name": "🎤┃Voice Channels",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "General Voice",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "Chill Zone",
+            "type": "voice",
+            "user_limit": 15
+          },
+          {
+            "name": "Music Lounge",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Gaming",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Study Room",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "Event Voice",
+            "type": "voice",
+            "user_limit": 30
+          },
+          {
+            "name": "AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  }
+}

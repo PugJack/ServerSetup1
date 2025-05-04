@@ -1,0 +1,46 @@
+{
+    "submissions": {
+        "s": {
+            "data": {
+                "name": "s",
+                "description": "test",
+                "category": "test",
+                "roles": [],
+                "categories": [
+                    {
+                        "name": "Text channels",
+                        "permissions": {},
+                        "channels": [
+                            {
+                                "name": "general",
+                                "type": "text",
+                                "topic": "",
+                                "slowmode": 0,
+                                "nsfw": false,
+                                "permissions": {}
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Voice channels",
+                        "permissions": {},
+                        "channels": [
+                            {
+                                "name": "General",
+                                "type": "voice",
+                                "bitrate": 64000,
+                                "user_limit": 0,
+                                "permissions": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "submitted_by": 737485882419839056,
+                "submitted_at": "2025-05-03 22:55:29",
+                "status": "pending"
+            }
+        }
+    }
+}

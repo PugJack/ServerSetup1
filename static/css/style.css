@@ -1,0 +1,97 @@
+/* Custom styling on top of Bootstrap */
+
+/* Hero section */
+.hero {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    padding: 3rem 0;
+}
+
+.discord-preview {
+    background-color: var(--bs-dark);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Card styling */
+.card {
+    background-color: var(--bs-dark);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA section */
+.cta-section {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+/* Footer styling */
+.footer {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+.footer a {
+    color: var(--bs-light);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--bs-primary);
+}
+
+/* Code blocks */
+code {
+    background-color: #2d2d2d;
+    color: #f8f9fa;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-online {
+    background-color: #43b581;
+}
+
+.status-offline {
+    background-color: #f04747;
+}
+
+.status-pending {
+    background-color: #faa61a;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* Bot status section */
+.bot-status {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--bs-dark);
+    margin-bottom: 1rem;
+}

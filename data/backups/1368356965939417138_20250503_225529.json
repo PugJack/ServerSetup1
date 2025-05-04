@@ -1,0 +1,35 @@
+{
+    "name": "Pug Backup",
+    "description": "Backup of Pug created on 2025-05-03",
+    "category": "Backup",
+    "roles": [],
+    "categories": [
+        {
+            "name": "Text channels",
+            "permissions": {},
+            "channels": [
+                {
+                    "name": "general",
+                    "type": "text",
+                    "topic": "",
+                    "slowmode": 0,
+                    "nsfw": false,
+                    "permissions": {}
+                }
+            ]
+        },
+        {
+            "name": "Voice channels",
+            "permissions": {},
+            "channels": [
+                {
+                    "name": "General",
+                    "type": "voice",
+                    "bitrate": 64000,
+                    "user_limit": 0,
+                    "permissions": {}
+                }
+            ]
+        }
+    ]
+}
