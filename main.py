@@ -3,6 +3,8 @@ import time
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+from app import add_headers, home, status, keep_alive, uptime, favicon, page_not_found, server_error
+from app import app
 # Main app already handles web functionality
 
 class Base(DeclarativeBase):
@@ -24,7 +26,7 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
 db.init_app(app)
 
 # Import handlers from app.py
-from app import add_headers, home, status, keep_alive, uptime, favicon, page_not_found, server_error
+
 
 # Register route handlers
 app.after_request(add_headers)
@@ -63,7 +65,6 @@ with app.app_context():
     from bot import start_bot
     start_bot()
 
-from app import app
 
 if __name__ == "__main__":
     # Start the Flask app
