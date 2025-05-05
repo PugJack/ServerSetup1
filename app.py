@@ -99,6 +99,11 @@ def uptime():
 def favicon():
     return app.send_static_file('img/favicon.ico')
 
+@app.route('/terms')
+def terms():
+    client_id = os.environ.get('DISCORD_CLIENT_ID', '')
+    return render_template('terms.html', client_id=client_id)
+
 # Error handlers
 @app.errorhandler(404)
 def page_not_found(e):
