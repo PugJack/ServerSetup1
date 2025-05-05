@@ -4268,6 +4268,494 @@
       }
     ]
   },
+  "chillhangout": {
+    "description": "A relaxed community space for friends to chat, vibe, and game casually",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Mod",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "DJ",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true
+        }
+      },
+      {
+        "name": "Vibe Master",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Homie",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🏠┃𝑯𝒐𝒎𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the chill zone!"
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important updates"
+          },
+          {
+            "name": "🎉┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Upcoming hangouts and events"
+          }
+        ]
+      },
+      {
+        "name": "💭┃𝑪𝒉𝒂𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General chat"
+          },
+          {
+            "name": "🎮┃ɢᴀᴍɪɴɢ",
+            "type": "text",
+            "topic": "Gaming discussions"
+          },
+          {
+            "name": "😂┃ᴍᴇᴍᴇꜱ",
+            "type": "text",
+            "topic": "Share your memes"
+          },
+          {
+            "name": "📸┃ꜱᴇʟꜰɪᴇꜱ",
+            "type": "text",
+            "topic": "Share your pics"
+          },
+          {
+            "name": "💭┃ᴠᴇɴᴛɪɴɢ",
+            "type": "text",
+            "topic": "Let it all out"
+          }
+        ]
+      },
+      {
+        "name": "🎵┃𝑽𝒊𝒃𝒆𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎵┃ᴍᴜꜱɪᴄ-ᴄʜᴀᴛ",
+            "type": "text",
+            "topic": "Music discussions"
+          },
+          {
+            "name": "🎧┃ᴍᴜꜱɪᴄ-ʙᴏᴛꜱ",
+            "type": "text",
+            "topic": "Music bot commands"
+          },
+          {
+            "name": "🎵┃Chill Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🎮┃Gaming Room",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  "sneakers": {
+    "description": "A style-focused server for people into fashion drops, sneaker culture, and streetwear",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Verified Seller",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Style Expert",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Sneakerhead",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "👟┃𝑰𝒏𝒇𝒐",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the sneaker community!"
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important updates"
+          },
+          {
+            "name": "📅┃ᴅʀᴏᴘꜱ",
+            "type": "text",
+            "topic": "Upcoming releases"
+          }
+        ]
+      },
+      {
+        "name": "👕┃𝑺𝒕𝒚𝒍𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General fashion chat"
+          },
+          {
+            "name": "👟┃ꜱɴᴇᴀᴋᴇʀꜱ",
+            "type": "text",
+            "topic": "Sneaker discussions"
+          },
+          {
+            "name": "👕┃ꜱᴛʀᴇᴇᴛᴡᴇᴀʀ",
+            "type": "text",
+            "topic": "Streetwear discussions"
+          },
+          {
+            "name": "📸┃ꜰɪᴛ-ᴘɪᴄꜱ",
+            "type": "text",
+            "topic": "Share your outfits"
+          },
+          {
+            "name": "💭┃ꜱᴛʏʟᴇ-ʜᴇʟᴘ",
+            "type": "text",
+            "topic": "Get style advice"
+          }
+        ]
+      },
+      {
+        "name": "💰┃𝑴𝒂𝒓𝒌𝒆𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📊┃ᴍᴀʀᴋᴇᴛ-ᴛᴀʟᴋ",
+            "type": "text",
+            "topic": "Market discussion"
+          },
+          {
+            "name": "💰┃ʙᴜʏ-ꜱᴇʟʟ",
+            "type": "text",
+            "topic": "Trading marketplace"
+          },
+          {
+            "name": "✅┃ʟᴇɢɪᴛ-ᴄʜᴇᴄᴋꜱ",
+            "type": "text",
+            "topic": "Legit check requests"
+          }
+        ]
+      }
+    ]
+  },
+  "cars": {
+    "description": "For car lovers and gearheads. Includes sections for builds, meets, detailing, racing clips, and car spotting",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Mechanic",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Car Expert",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Gearhead",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🚗┃𝑮𝒂𝒓𝒂𝒈𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the car community!"
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important updates"
+          },
+          {
+            "name": "📅┃ᴍᴇᴇᴛꜱ",
+            "type": "text",
+            "topic": "Car meets and events"
+          }
+        ]
+      },
+      {
+        "name": "🔧┃𝑴𝒆𝒄𝒉𝒂𝒏𝒊𝒄𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General car chat"
+          },
+          {
+            "name": "🔧┃ʙᴜɪʟᴅꜱ",
+            "type": "text",
+            "topic": "Project cars and builds"
+          },
+          {
+            "name": "🛠️┃ᴅɪʏ",
+            "type": "text",
+            "topic": "DIY and repairs"
+          },
+          {
+            "name": "✨┃ᴅᴇᴛᴀɪʟɪɴɢ",
+            "type": "text",
+            "topic": "Car detailing discussion"
+          }
+        ]
+      },
+      {
+        "name": "📸┃𝑴𝒆𝒅𝒊𝒂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📸┃ᴄᴀʀ-ꜱᴘᴏᴛᴛɪɴɢ",
+            "type": "text",
+            "topic": "Share car spots"
+          },
+          {
+            "name": "🎥┃ʀᴀᴄɪɴɢ-ᴄʟɪᴘꜱ",
+            "type": "text",
+            "topic": "Racing videos"
+          },
+          {
+            "name": "🖼️┃ꜱʜᴏᴡᴄᴀꜱᴇ",
+            "type": "text",
+            "topic": "Show off your ride"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑽𝒐𝒊𝒄𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🔧┃Garage Talk",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🏁┃Race Night",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
   "community": {
     "description": "A general community server for socializing and discussions",
     "roles": [
