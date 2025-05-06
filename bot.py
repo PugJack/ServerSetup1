@@ -1160,8 +1160,38 @@ async def review_templates(interaction: discord.Interaction):
     await interaction.response.send_message("Template review functionality coming soon!", ephemeral=True)
 
 # Apply the rate limiting and error handling decorator to all commands
-for command in bot.tree.get_commands():
-    command.callback = rate_limit_and_handle_errors()(command.callback)
+@bot.tree.error
+async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
+    """Handle errors from application commands."""
+    if isinstance(error, app_commands.CommandOnCooldown):
+        await interaction.response.send_message(
+            f"⏱️ This command is on cooldown. Please wait {int(error.retry_after)} more seconds.",
+            ephemeral=True
+        )
+    else:
+        logger.error(f"Command error: {error}")
+        await interaction.response.send_message(
+            "An error occurred while executing the command.",
+            ephemeral=True
+        )
+
+# We'll handle rate limiting through the command checks instead
+def get_cooldown(command_name: str) -> int:
+    """Get cooldown time for a command."""
+    cooldowns = {
+        "template": 30,  # 30 seconds for applying templates
+        "backup": 60,    # 60 seconds for backup operations
+        "ai": 120,       # 120 seconds for AI operations
+        "default": 3     # 3 seconds for most commands
+    }
+
+    if command_name in ["customize", "gaming", "community", "content", "serverhub", "promohub"]:
+        return cooldowns["template"]
+    elif command_name == "backup":
+        return cooldowns["backup"]
+    elif command_name == "ai-template":
+        return cooldowns["ai"]
+    return cooldowns["default"]
 
 if __name__ == "__main__":
     if TOKEN:
