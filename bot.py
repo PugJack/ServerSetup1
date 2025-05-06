@@ -169,16 +169,16 @@ def check_rate_limit(command_name, user_id):
 @bot.tree.command(name="help", description="View available server templates and commands")
 async def help_command(interaction: discord.Interaction):
     """Display help information and available server templates."""
-    
+
     # Create page 1 - Main Commands
     page1 = discord.Embed(
         title="ServerSetup Bot - Help (1/2)",
         description="Create and manage Discord servers with pre-configured templates and tools.",
         color=discord.Color.blue()
     )
-    
+
     page1.set_thumbnail(url=bot.user.avatar.url if bot.user.avatar else None)
-    
+
     page1.add_field(
         name="📌 Essential Commands",
         value=(
@@ -189,7 +189,7 @@ async def help_command(interaction: discord.Interaction):
         ),
         inline=False
     )
-    
+
     page1.add_field(
         name="🛠️ Server Management",
         value=(
@@ -200,17 +200,22 @@ async def help_command(interaction: discord.Interaction):
         ),
         inline=False
     )
-    
+
     page1.add_field(
         name="🎨 Template System",
         value=(
             "`/preview` - Preview any template\n"
             "`/submit-template` - Share your setup\n" 
-            "`/serverhub` - Create full server"
+            "`/serverhub` - Promotion Hub (40+ channels)\n"
+            "`/gaming` - Gaming template (30+ channels)\n"
+            "`/community` - Community template (25+ channels)\n"
+            "`/chillhangout` - Chill server for vibing\n"
+            "`/sneakers` - Sneaker & streetwear community\n"
+            "`/cars` - Car & motorsports enthusiasts"
         ),
         inline=False
     )
-    
+
     page1.add_field(
         name="💡 Quick Tips",
         value=(
@@ -221,16 +226,16 @@ async def help_command(interaction: discord.Interaction):
         ),
         inline=False
     )
-    
+
     # Create page 2 - Templates
     page2 = discord.Embed(
         title="ServerSetup Bot - Templates (2/2)", 
         description="Available server templates by category:",
         color=discord.Color.blue()
     )
-    
+
     categorized_templates = template_manager.get_templates_by_category()
-    
+
     for category, templates in categorized_templates.items():
         template_list = "\n".join([f"• `/{name.lower()}` - {desc[:50]}..." 
                                  for name, desc in templates.items()])
@@ -240,25 +245,34 @@ async def help_command(interaction: discord.Interaction):
                 value=template_list,
                 inline=False
             )
-    
+
     page2.set_footer(text="Use the buttons below to navigate • Join our support server for help")
-    
+
     # Create navigation buttons
     class NavigationView(discord.ui.View):
         def __init__(self):
             super().__init__(timeout=60)
             self.current_page = 1
-            
+
+            # Add support server button
+            support_button = discord.ui.Button(
+                label="Support Server",
+                style=discord.ButtonStyle.link,
+                url="https://discord.gg/ZSytBRcmjA",
+                emoji="🛟"
+            )
+            self.add_item(support_button)
+
         @discord.ui.button(label="◀️ Main", style=discord.ButtonStyle.blurple)
         async def show_page1(self, button_interaction: discord.Interaction, button: discord.ui.Button):
             self.current_page = 1
             await button_interaction.response.edit_message(embed=page1, view=self)
-            
+
         @discord.ui.button(label="Templates ▶️", style=discord.ButtonStyle.blurple)
         async def show_page2(self, button_interaction: discord.Interaction, button: discord.ui.Button):
             self.current_page = 2
             await button_interaction.response.edit_message(embed=page2, view=self)
-    
+
     # Send initial embed with navigation
     await interaction.response.send_message(embed=page1, view=NavigationView())
 
@@ -583,7 +597,9 @@ async def customize_template(interaction: discord.Interaction,
         }
 
         # Apply template with options and track user for analytics
-        await template_manager.apply_template(interaction.guild, template_name, template_options, interaction.user.id)
+        from app import app
+        with app.app_context():
+            await template_manager.apply_template(interaction.guild, template_name, template_options, interaction.user.id)
 
         # Send confirmation
         await interaction.followup.send(
@@ -791,10 +807,10 @@ async def preview_template(interaction: discord.Interaction, template_name: str)
         overview_embed.add_field(name="📂 Categories & Channels", value=categories_text or "No categories defined", inline=False)
 
         # Add a footer with instructions
-        overview_embed.set_footer(text=f"Use the /{template_name.lower()} command to apply this template to your server")
+        overview_embed.set_footer(text=f"Use the /{template_name.lower()} command to apply this template to yourserver")
 
         # Send the preview embed
-        await interaction.response.send_message(embed=overview_embed)
+        await interaction.response.sendmessage(embed=overview_embed)
 
     except Exception as e:
         logger.error(f"Error generating template preview: {e}")
@@ -811,8 +827,10 @@ async def serverhub(interaction: discord.Interaction):
     await interaction.response.defer(ephemeral=True)
 
     try:
-        # Apply the server hub template and track user for analytics
-        await template_manager.apply_template(interaction.guild, "serverhub", user_id=interaction.user.id)
+        from app import app
+        with app.app_context():
+            # Apply the server hub template and track user for analytics
+            await template_manager.apply_template(interaction.guild, "serverhub", user_id=interaction.user.id)
 
         # Success message with preview tip
         await interaction.followup.send(
@@ -946,15 +964,14 @@ for template_name in template_manager.get_template_names():
         await interaction.response.defer(ephemeral=True)
 
         try:
-            # Apply the chosen template and track user for analytics
-            await template_manager.apply_template(interaction.guild, template_name, user_id=interaction.user.id)
-
-            # Success message with preview tip
-            await interaction.followup.send(
-                f"{template_name} template applied successfully! Your server now has channels set up with appropriate roles and permissions.\n\n" +
-                f"💡 Tip: Next time you can use `/preview {template_name.lower()}` to see what's included before applying a template.",
-                ephemeral=True
-            )
+            from app import app
+            with app.app_context():
+                await template_manager.apply_template(
+                    interaction.guild,
+                    template_name,
+                    user_id=interaction.user.id
+                )
+                await interaction.followup.send(f"Successfully applied the {template_name} template!", ephemeral=True)
         except Exception as e:
             logger.error(f"Error applying {template_name} template: {e}")
             await interaction.followup.send(f"Error applying {template_name} template: {str(e)}", ephemeral=True)
@@ -1121,7 +1138,7 @@ async def review_templates(interaction: discord.Interaction):
 async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     """Handle errors in application commands."""
     command_name = interaction.command.name if interaction.command else "unknown"
-    
+
     if isinstance(error, app_commands.CommandOnCooldown):
         await interaction.response.send_message(
             f"⏱️ This command is on cooldown. Please wait {error.retry_after:.1f} more seconds.",

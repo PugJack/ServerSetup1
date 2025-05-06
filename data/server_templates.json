@@ -237,7 +237,7 @@
       }
     ]
   },
-  
+
   "community": {
     "description": "General community server with channels for socializing, sharing, and having fun",
     "roles": [
@@ -488,7 +488,7 @@
       }
     ]
   },
-  
+
   "content": {
     "description": "Content creator server with channels for announcements, feedback, and exclusive content",
     "roles": [
@@ -809,7 +809,7 @@
       }
     ]
   },
-  
+
   "fan": {
     "description": "Fan server for books, movies, games, or TV shows with discussions, fan art, and theory channels",
     "roles": [
@@ -1685,7 +1685,7 @@
       }
     ]
   },
-  
+
   "education": {
     "description": "Educational server with study groups, resource sharing, and subject-specific channels",
     "roles": [
@@ -2283,7 +2283,7 @@
       }
     ]
   },
-  
+
   "business": {
     "description": "Business and entrepreneurship server with networking, marketing, and resource channels",
     "roles": [
@@ -2625,7 +2625,7 @@
       }
     ]
   },
-  
+
   "botsupport": {
     "description": "Official bot support server template with tickets, announcements, and community channels",
     "roles": [
@@ -3154,7 +3154,540 @@
       }
     ]
   },
-  
+
+  "promotion": {
+    "description": "Comprehensive server promotion and advertising hub with 40+ channels for different types of promotions",
+    "roles": [
+      {
+        "name": "👑 Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "🛠️ Moderator",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_channels": true
+        }
+      },
+      {
+        "name": "🧩 Roblox Dev",
+        "color": "0x3498DB",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "🎯 Advertiser",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "🎖️ VIP",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "🚀 Booster",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "📣 Promoter",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "🧑‍💻 Bot Developer",
+        "color": "0x34495E",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "🪪 Level 5",
+        "color": "0xE91E63",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "🪪 Level 4",
+        "color": "0xD81B60",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "🪪 Level 3",
+        "color": "0xC2185B",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "🪪 Level 2",
+        "color": "0xAD1457",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "🪪 Level 1",
+        "color": "0x880E4F",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {}
+      },
+      {
+        "name": "⚠️ Muted",
+        "color": "0x95A5A6",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": false,
+          "add_reactions": false
+        }
+      },
+      {
+        "name": "⛔ Blacklisted",
+        "color": "0x7F8C8D",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": false,
+          "add_reactions": false,
+          "view_channel": false
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "📌┆INFORMATION",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・📌・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📃┆rules",
+            "type": "text",
+            "topic": "Server rules and guidelines",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📢┆announcements",
+            "type": "text",
+            "topic": "Important server announcements",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📘┆faq",
+            "type": "text",
+            "topic": "Frequently asked questions",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📖┆advertisement-rules",
+            "type": "text",
+            "topic": "Rules for advertising",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "💬┆GENERAL CHAT",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・💬・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "💬┆chat",
+            "type": "text",
+            "topic": "General chat channel"
+          },
+          {
+            "name": "💬┆chat-2",
+            "type": "text",
+            "topic": "Secondary chat channel"
+          },
+          {
+            "name": "🤖┆bot-commands",
+            "type": "text",
+            "topic": "Use bot commands here"
+          },
+          {
+            "name": "📢┆spam",
+            "type": "text",
+            "topic": "Channel for spam and bot commands"
+          },
+          {
+            "name": "🎨┆media-drop",
+            "type": "text",
+            "topic": "Share images and media"
+          },
+          {
+            "name": "🎶┆song-sharing",
+            "type": "text",
+            "topic": "Share your favorite music"
+          },
+          {
+            "name": "😂┆memes",
+            "type": "text",
+            "topic": "Share memes and funny content"
+          }
+        ]
+      },
+      {
+        "name": "🕐┆COOLDOWN ADS",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・⏰・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "🕐┆1-minute-ads",
+            "type": "text",
+            "topic": "Post ads every 1 minute",
+            "slowmode": 60
+          },
+          {
+            "name": "🕑┆5-minute-ads",
+            "type": "text",
+            "topic": "Post ads every 5 minutes",
+            "slowmode": 300
+          },
+          {
+            "name": "🕒┆10-minute-ads",
+            "type": "text",
+            "topic": "Post ads every 10 minutes",
+            "slowmode": 600
+          },
+          {
+            "name": "🕓┆30-minute-ads",
+            "type": "text",
+            "topic": "Post ads every 30 minutes",
+            "slowmode": 1800
+          },
+          {
+            "name": "🕔┆1-hour-ads",
+            "type": "text",
+            "topic": "Post ads every hour",
+            "slowmode": 3600
+          },
+          {
+            "name": "🕕┆6-hour-ads",
+            "type": "text",
+            "topic": "Post ads every 6 hours",
+            "slowmode": 21600
+          },
+          {
+            "name": "🕖┆24-hour-ads",
+            "type": "text",
+            "topic": "Post ads every 24 hours",
+            "slowmode": 86400
+          }
+        ]
+      },
+      {
+        "name": "🎮┆ROBLOX SERVERS",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・🎮・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "🎮┆roblox-communities",
+            "type": "text",
+            "topic": "Advertise Roblox communities",
+            "slowmode": 30
+          },
+          {
+            "name": "🔧┆roblox-dev-studios",
+            "type": "text",
+            "topic": "Advertise Roblox development studios",
+            "slowmode": 30
+          },
+          {
+            "name": "🧑‍💻┆roblox-scripters",
+            "type": "text",
+            "topic": "Find or advertise Roblox scripting services",
+            "slowmode": 30
+          },
+          {
+            "name": "🏗️┆roblox-builders",
+            "type": "text",
+            "topic": "Find or advertise Roblox building services",
+            "slowmode": 30
+          },
+          {
+            "name": "🎨┆roblox-artists",
+            "type": "text",
+            "topic": "Find or advertise Roblox art services",
+            "slowmode": 30
+          },
+          {
+            "name": "📊┆roblox-showcase",
+            "type": "text",
+            "topic": "Showcase your Roblox projects",
+            "slowmode": 30
+          }
+        ]
+      },
+      {
+        "name": "📊┆SIZE BASED ADS",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・📊・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "🐣┆under-100-members",
+            "type": "text",
+            "topic": "Servers with less than 100 members",
+            "slowmode": 30
+          },
+          {
+            "name": "🌱┆100-500-members",
+            "type": "text",
+            "topic": "Servers with 100-500 members",
+            "slowmode": 30
+          },
+          {
+            "name": "🌳┆500-1k-members",
+            "type": "text",
+            "topic": "Servers with 500-1000 members",
+            "slowmode": 30
+          },
+          {
+            "name": "🌲┆1k-5k-members",
+            "type": "text",
+            "topic": "Servers with 1000-5000 members",
+            "slowmode": 30
+          },
+          {
+            "name": "🏔️┆5k-plus-servers",
+            "type": "text",
+            "topic": "Servers with 5000+ members",
+            "slowmode": 30
+          },
+          {
+            "name": "🌍┆global-servers",
+            "type": "text",
+            "topic": "International servers",
+            "slowmode": 30
+          },
+          {
+            "name": "🗺️┆region-based-servers",
+            "type": "text",
+            "topic": "Region-specific servers",
+            "slowmode": 30
+          }
+        ]
+      },
+      {
+        "name": "🎯┆TOPIC BASED ADS",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・🎯・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "🧑‍🤝‍🧑┆community-servers",
+            "type": "text",
+            "topic": "General community servers",
+            "slowmode": 30
+          },
+          {
+            "name": "🎓┆study-servers",
+            "type": "text",
+            "topic": "Educational and study servers",
+            "slowmode": 30
+          },
+          {
+            "name": "🕹️┆gaming-servers",
+            "type": "text",
+            "topic": "Gaming communities",
+            "slowmode": 30
+          },
+          {
+            "name": "📷┆creator-servers",
+            "type": "text",
+            "topic": "Content creator communities",
+            "slowmode": 30
+          },
+          {
+            "name": "🧪┆developer-servers",
+            "type": "text",
+            "topic": "Developer communities",
+            "slowmode": 30
+          },
+          {
+            "name": "🎁┆giveaway-servers",
+            "type": "text",
+            "topic": "Giveaway communities",
+            "slowmode": 30
+          }
+        ]
+      },
+      {
+        "name": "💻┆OTHER PROMOTIONS",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "・━━━━━━━・💻・━━━━━━━・",
+            "type": "text",
+            "topic": "",
+            "permissions": {
+              "@everyone": {
+                "send_messages": false
+              }
+            }
+          },
+          {
+            "name": "📄┆how-to-partner",
+            "type": "text",
+            "topic": "Partnership information and guidelines",
+            "slowmode": 30
+          },
+          {
+            "name": "🤝┆partner-ads",
+            "type": "text",
+            "topic": "Partner server advertisements",
+            "slowmode": 30
+          },
+          {
+            "name": "📢┆bot-ads",
+            "type": "text",
+            "topic": "Discord bot advertisements",
+            "slowmode": 30
+          },
+          {
+            "name": "🌐┆web-projects",
+            "type": "text",
+            "topic": "Web project advertisements",
+            "slowmode": 30
+          },
+          {
+            "name": "🔁┆ad-exchange",
+            "type": "text",
+            "topic": "Exchange advertisements with other servers",
+            "slowmode": 30
+          },
+          {
+            "name": "📌┆custom-requests",
+            "type": "text",
+            "topic": "Request custom promotion opportunities",
+            "slowmode": 30
+          }
+        ]
+      }
+    ]
+  },
   "serverhub": {
     "description": "A comprehensive Server Hub with 50+ channels organized into categories",
     "roles": [
@@ -4261,6 +4794,494 @@
           },
           {
             "name": "AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chillhangout": {
+    "description": "A relaxed community space for friends to chat, vibe, and game casually",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Mod",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "DJ",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "priority_speaker": true
+        }
+      },
+      {
+        "name": "Vibe Master",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Homie",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🏠┃𝑯𝒐𝒎𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the chill zone!"
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important updates"
+          },
+          {
+            "name": "🎉┃ᴇᴠᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Upcoming hangouts and events"
+          }
+        ]
+      },
+      {
+        "name": "💭┃𝑪𝒉𝒂𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General chat"
+          },
+          {
+            "name": "🎮┃ɢᴀᴍɪɴɢ",
+            "type": "text",
+            "topic": "Gaming discussions"
+          },
+          {
+            "name": "😂┃ᴍᴇᴍᴇꜱ",
+            "type": "text",
+            "topic": "Share your memes"
+          },
+          {
+            "name": "📸┃ꜱᴇʟꜰɪᴇꜱ",
+            "type": "text",
+            "topic": "Share your pics"
+          },
+          {
+            "name": "💭┃ᴠᴇɴᴛɪɴɢ",
+            "type": "text",
+            "topic": "Let it all out"
+          }
+        ]
+      },
+      {
+        "name": "🎵┃𝑽𝒊𝒃𝒆𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🎵┃ᴍᴜꜱɪᴄ-ᴄʜᴀᴛ",
+            "type": "text",
+            "topic": "Music discussions"
+          },
+          {
+            "name": "🎧┃ᴍᴜꜱɪᴄ-ʙᴏᴛꜱ",
+            "type": "text",
+            "topic": "Music bot commands"
+          },
+          {
+            "name": "🎵┃Chill Lounge",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🎮┃Gaming Room",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "💤┃AFK",
+            "type": "voice",
+            "user_limit": 0
+          }
+        ]
+      }
+    ]
+  },
+  "sneakers": {
+    "description": "A style-focused server for people into fashion drops, sneaker culture, and streetwear",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Verified Seller",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Style Expert",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Sneakerhead",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "👟┃𝑰𝒏𝒇𝒐",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the sneaker community!"
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important updates"
+          },
+          {
+            "name": "📅┃ᴅʀᴏᴘꜱ",
+            "type": "text",
+            "topic": "Upcoming releases"
+          }
+        ]
+      },
+      {
+        "name": "👕┃𝑺𝒕𝒚𝒍𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General fashion chat"
+          },
+          {
+            "name": "👟┃ꜱɴᴇᴀᴋᴇʀꜱ",
+            "type": "text",
+            "topic": "Sneaker discussions"
+          },
+          {
+            "name": "👕┃ꜱᴛʀᴇᴇᴛᴡᴇᴀʀ",
+            "type": "text",
+            "topic": "Streetwear discussions"
+          },
+          {
+            "name": "📸┃ꜰɪᴛ-ᴘɪᴄꜱ",
+            "type": "text",
+            "topic": "Share your outfits"
+          },
+          {
+            "name": "💭┃ꜱᴛʏʟᴇ-ʜᴇʟᴘ",
+            "type": "text",
+            "topic": "Get style advice"
+          }
+        ]
+      },
+      {
+        "name": "💰┃𝑴𝒂𝒓𝒌𝒆𝒕",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📊┃ᴍᴀʀᴋᴇᴛ-ᴛᴀʟᴋ",
+            "type": "text",
+            "topic": "Market discussion"
+          },
+          {
+            "name": "💰┃ʙᴜʏ-ꜱᴇʟʟ",
+            "type": "text",
+            "topic": "Trading marketplace"
+          },
+          {
+            "name": "✅┃ʟᴇɢɪᴛ-ᴄʜᴇᴄᴋꜱ",
+            "type": "text",
+            "topic": "Legit check requests"
+          }
+        ]
+      }
+    ]
+  },
+  "cars": {
+    "description": "For car lovers and gearheads. Includes sections for builds, meets, detailing, racing clips, and car spotting",
+    "roles": [
+      {
+        "name": "Owner",
+        "color": "0xFF0000",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "administrator": true
+        }
+      },
+      {
+        "name": "Admin",
+        "color": "0xE74C3C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_guild": true,
+          "manage_roles": true,
+          "manage_channels": true,
+          "kick_members": true,
+          "ban_members": true,
+          "manage_messages": true
+        }
+      },
+      {
+        "name": "Moderator",
+        "color": "0x1ABC9C",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {
+          "manage_messages": true,
+          "kick_members": true,
+          "mute_members": true
+        }
+      },
+      {
+        "name": "Mechanic",
+        "color": "0xF1C40F",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Car Expert",
+        "color": "0x9B59B6",
+        "hoist": true,
+        "mentionable": true,
+        "permissions": {}
+      },
+      {
+        "name": "Gearhead",
+        "color": "0x2ECC71",
+        "hoist": true,
+        "mentionable": false,
+        "permissions": {
+          "send_messages": true,
+          "read_message_history": true,
+          "connect": true,
+          "speak": true
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "🚗┃𝑮𝒂𝒓𝒂𝒈𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "👋┃ᴡᴇʟᴄᴏᴍᴇ",
+            "type": "text",
+            "topic": "Welcome to the car community!"
+          },
+          {
+            "name": "📢┃ᴀɴɴᴏᴜɴᴄᴇᴍᴇɴᴛꜱ",
+            "type": "text",
+            "topic": "Important updates"
+          },
+          {
+            "name": "📅┃ᴍᴇᴇᴛꜱ",
+            "type": "text",
+            "topic": "Car meets and events"
+          }
+        ]
+      },
+      {
+        "name": "🔧┃𝑴𝒆𝒄𝒉𝒂𝒏𝒊𝒄𝒔",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "💬┃ɢᴇɴᴇʀᴀʟ",
+            "type": "text",
+            "topic": "General car chat"
+          },
+          {
+            "name": "🔧┃ʙᴜɪʟᴅꜱ",
+            "type": "text",
+            "topic": "Project cars and builds"
+          },
+          {
+            "name": "🛠️┃ᴅɪʏ",
+            "type": "text",
+            "topic": "DIY and repairs"
+          },
+          {
+            "name": "✨┃ᴅᴇᴛᴀɪʟɪɴɢ",
+            "type": "text",
+            "topic": "Car detailing discussion"
+          }
+        ]
+      },
+      {
+        "name": "📸┃𝑴𝒆𝒅𝒊𝒂",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "📸┃ᴄᴀʀ-ꜱᴘᴏᴛᴛɪɴɢ",
+            "type": "text",
+            "topic": "Share car spots"
+          },
+          {
+            "name": "🎥┃ʀᴀᴄɪɴɢ-ᴄʟɪᴘꜱ",
+            "type": "text",
+            "topic": "Racing videos"
+          },
+          {
+            "name": "🖼️┃ꜱʜᴏᴡᴄᴀꜱᴇ",
+            "type": "text",
+            "topic": "Show off your ride"
+          }
+        ]
+      },
+      {
+        "name": "🎙️┃𝑽𝒐𝒊𝒄𝒆",
+        "permissions": {
+          "@everyone": {
+            "view_channel": true
+          }
+        },
+        "channels": [
+          {
+            "name": "🔧┃Garage Talk",
+            "type": "voice",
+            "user_limit": 0
+          },
+          {
+            "name": "🏁┃Race Night",
+            "type": "voice",
+            "user_limit": 10
+          },
+          {
+            "name": "💤┃AFK",
             "type": "voice",
             "user_limit": 0
           }
