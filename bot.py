@@ -206,7 +206,7 @@ async def help_command(interaction: discord.Interaction):
         value=(
             "`/preview` - Preview any template\n"
             "`/submit-template` - Share your setup\n" 
-            "`/serverhub` - Promotion Hub (40+ channels)\n"
+            "`/promohub` - Promotion Hub (40+ channels)\n"
             "`/gaming` - Gaming template (30+ channels)\n"
             "`/community` - Community template (25+ channels)\n"
             "`/chillhangout` - Chill server for vibing\n"
@@ -816,9 +816,9 @@ async def preview_template(interaction: discord.Interaction, template_name: str)
         logger.error(f"Error generating template preview: {e}")
         await interaction.response.send_message(f"Error generating preview: {str(e)}", ephemeral=True)
 
-@bot.tree.command(name="serverhub", description="Create a Server Hub template with 50+ channels")
+@bot.tree.command(name="promohub", description="Create a Server Hub template with 50+ channels")
 @app_commands.checks.has_permissions(administrator=True)
-async def serverhub(interaction: discord.Interaction):
+async def promohub(interaction: discord.Interaction):
     """Creates a Server Hub template with 50+ channels."""
     if not interaction.guild or interaction.user.id != interaction.guild.owner_id:
         await interaction.response.send_message("This command can only be used by the server owner!", ephemeral=True)
