@@ -144,7 +144,7 @@ def check_rate_limit(command_name, user_id):
 
     # Determine command type
     command_type = "default"
-    if command_name in ["customize", "gaming", "community", "content", "serverhub"]:
+    if command_name in ["customize", "gaming", "community", "content", "serverhub", "promohub"]:
         command_type = "template"
     elif command_name == "backup":
         command_type = "backup"
@@ -204,14 +204,16 @@ async def help_command(interaction: discord.Interaction):
     page1.add_field(
         name="🎨 Template System",
         value=(
-            "`/preview` - Preview any template\n"
+            "`/preview` - Preview any template before applying\n"
             "`/submit-template` - Share your setup\n" 
             "`/promohub` - Promotion Hub (40+ channels)\n"
+            "`/serverhub` - Server Hub (50+ channels)\n"
             "`/gaming` - Gaming template (30+ channels)\n"
             "`/community` - Community template (25+ channels)\n"
             "`/chillhangout` - Chill server for vibing\n"
             "`/sneakers` - Sneaker & streetwear community\n"
-            "`/cars` - Car & motorsports enthusiasts"
+            "`/cars` - Car & motorsports enthusiasts\n"
+            "`/customize` - Customize any template"
         ),
         inline=False
     )
@@ -512,7 +514,7 @@ async def info_command(interaction: discord.Interaction):
 
     embed.add_field(
         name="Bot Statistics",
-        value=f"Servers: {guild_count}\nAvailable Templates: {template_count}\nCommands: 13",
+        value=f"Servers: {guild_count}\nAvailable Templates: {template_count}\nCommands: 14",
         inline=True
     )
 
@@ -804,21 +806,46 @@ async def preview_template(interaction: discord.Interaction, template_name: str)
         if len(preview_data['categories']) > 5:
             categories_text += f"*...and {len(preview_data['categories']) - 5} more categories*\n"
 
-        overview_embed.add_field(name="📂 Categories & Channels", value=categories_text or "No categories defined", inline=False)
+        overview_embed.add_field(name="📂 Categories & Channels", value=categories_text or"No categories defined", inline=False)
 
         # Add a footer with instructions
         overview_embed.set_footer(text=f"Use the /{template_name.lower()} command to apply this template to yourserver")
 
         # Send the preview embed
-        await interaction.response.sendmessage(embed=overview_embed)
+        await interaction.response.send_message(embed=overview_embed)
 
     except Exception as e:
         logger.error(f"Error generating template preview: {e}")
         await interaction.response.send_message(f"Error generating preview: {str(e)}", ephemeral=True)
 
-@bot.tree.command(name="promohub", description="Create a Server Hub template with 50+ channels")
+@bot.tree.command(name="promohub", description="Create a Server Promotion Hub with 40+ advertisement channels")
 @app_commands.checks.has_permissions(administrator=True)
 async def promohub(interaction: discord.Interaction):
+    """Creates a Server Promotion Hub with 40+ advertisement channels."""
+    if not interaction.guild or interaction.user.id != interaction.guild.owner_id:
+        await interaction.response.send_message("This command can only be used by the server owner!", ephemeral=True)
+        return
+
+    await interaction.response.defer(ephemeral=True)
+
+    try:
+        from app import app
+        with app.app_context():
+            await template_manager.apply_template(interaction.guild, "promohub", user_id=interaction.user.id)
+
+        # Success message with preview tip
+        await interaction.followup.send(
+            "Server Promotion Hub template applied successfully! Your server now has 40+ promotion channels set up with appropriate roles and permissions.\n\n" +
+            "💡 Tip: Next time you can use `/preview promohub` to see what's included before applying a template.",
+            ephemeral=True
+        )
+    except Exception as e:
+        logger.error(f"Error applying Promotion Hub template: {e}")
+        await interaction.followup.send(f"Error applying Promotion Hub template: {str(e)}", ephemeral=True)
+
+@bot.tree.command(name="serverhub", description="Create a Server Hub template with 50+ channels")
+@app_commands.checks.has_permissions(administrator=True)
+async def serverhub(interaction: discord.Interaction):
     """Creates a Server Hub template with 50+ channels."""
     if not interaction.guild or interaction.user.id != interaction.guild.owner_id:
         await interaction.response.send_message("This command can only be used by the server owner!", ephemeral=True)
@@ -829,7 +856,6 @@ async def promohub(interaction: discord.Interaction):
     try:
         from app import app
         with app.app_context():
-            # Apply the server hub template and track user for analytics
             await template_manager.apply_template(interaction.guild, "serverhub", user_id=interaction.user.id)
 
         # Success message with preview tip
@@ -950,8 +976,8 @@ async def submit_template_command(interaction: discord.Interaction,
 
 # Create commands for all server templates
 for template_name in template_manager.get_template_names():
-    # Skip serverhub as it's already defined explicitly above
-    if template_name.lower() == "serverhub":
+    # Skip serverhub and promohub as they're already defined explicitly above
+    if template_name.lower() in ["serverhub", "promohub"]:
         continue
 
     @bot.tree.command(name=template_name.lower(), description=f"Create a {template_name} server template")
@@ -1134,23 +1160,8 @@ async def review_templates(interaction: discord.Interaction):
     await interaction.response.send_message("Template review functionality coming soon!", ephemeral=True)
 
 # Apply the rate limiting and error handling decorator to all commands
-@bot.tree.error
-async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
-    """Handle errors in application commands."""
-    command_name = interaction.command.name if interaction.command else "unknown"
-
-    if isinstance(error, app_commands.CommandOnCooldown):
-        await interaction.response.send_message(
-            f"⏱️ This command is on cooldown. Please wait {error.retry_after:.1f} more seconds.",
-            ephemeral=True
-        )
-        bot_status["rate_limited_commands"].add(command_name)
-    else:
-        logger.error(f"Command error in {command_name}: {error}")
-        await interaction.response.send_message(
-            f"An error occurred: {str(error)}",
-            ephemeral=True
-        )
+for command in bot.tree.get_commands():
+    command.callback = rate_limit_and_handle_errors()(command.callback)
 
 if __name__ == "__main__":
     if TOKEN:
