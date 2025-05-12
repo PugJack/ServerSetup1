@@ -347,34 +347,16 @@ async def verification(interaction: discord.Interaction):
         for category in interaction.guild.categories:
             if category.id != verification_category.id:
                 try:
-                    # Set category permissions
                     await category.set_permissions(
                         verified_role,
                         view_channel=True,
-                        read_messages=True,
                         reason="ServerSetup Bot Verification System"
                     )
                     await category.set_permissions(
                         interaction.guild.default_role,
                         view_channel=False,
-                        read_messages=False,
                         reason="ServerSetup Bot Verification System"
                     )
-
-                    # Set permissions for all channels in category
-                    for channel in category.channels:
-                        await channel.set_permissions(
-                            verified_role,
-                            view_channel=True,
-                            read_messages=True,
-                            reason="ServerSetup Bot Verification System"
-                        )
-                        await channel.set_permissions(
-                            interaction.guild.default_role,
-                            view_channel=False,
-                            read_messages=False,
-                            reason="ServerSetup Bot Verification System"
-                        )
                 except discord.Forbidden:
                     pass
 
